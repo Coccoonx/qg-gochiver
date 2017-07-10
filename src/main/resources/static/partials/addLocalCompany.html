@@ -1,0 +1,143 @@
+
+<div align="center" ng-show="showLoading && !showAPIFail">
+	<img src="images/loader.gif" class="loader">
+</div>
+<div ng-show="!showLoading" id="main">
+	<div class="wrapper">
+		<!-- header start -->
+		<header>
+			<div class="header">
+				<div class="container">
+					<div class="top-nav">
+						<ul>
+						<span class="app_signature"><a
+							href="#/transactions" style="border: none;"><img alt="logo app"
+								src="../images/libreexchange_logo.png"
+								style="width: 30px; height: 30px;">&nbsp;&nbsp; 
+								<span style="color: #000; font-size: 24px; vertical-align: super;">Go Archive Portal</span></a>
+						</span>
+					</ul>
+					</div>
+					<div class="top-right">
+						<ul>
+							<li class="user dropdown"><a href="#/logout">Log out</a>
+<!-- 							<div class="dropdown-content"> -->
+<!-- 								<a href="#/logout">Log out</a> -->
+<!-- 							</div> -->
+							</li>
+
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header end -->
+		<div class="signup-main">
+			<div class="signup">
+				<div class="signup-box">
+
+					<img alt="CLOSE" src="../images/close.png" ng-click="close()" style="float: right;">
+					
+					<div class="form-title-row">
+						<h3>Add Local Company:</h3>
+					</div>
+							
+						
+					<br />
+
+
+					<form class="form-basic" name="myForm">
+
+<!-- 						<div class="form-row"> -->
+<!-- 							<label> <span>Country:</span> <input -->
+<!-- 								class="form-control" id="country" name="country" -->
+<!-- 								type="text" ng-model="localCompany.country" -->
+<!-- 								required -->
+<!-- 								autofocus/> -->
+<!-- 								<div class="help-block text-danger form-warning" -->
+<!--                                      ng-if="myForm.country.$dirty" -->
+<!--                                      ng-messages="myForm.country.$error"> -->
+<!--                                     <div ng-message="required">Country is required.</div> -->
+<!-- 								</div> -->
+<!-- 							</label> -->
+<!-- 						</div> -->
+						<div class="form-row">
+							<label> <span>Country :</span> <select
+								style="width: 191px;" class="form-control"
+								ng-options="country as country.name for country in countries"
+								ng-model="localCompany.countrynew" ng-change="changeData()">
+							</select>
+							</label>
+						</div>
+						
+						<div class="form-row">
+							<label> <span>Local Company:</span> <input
+								class="form-control" id="company" name="company"
+								type="text" ng-model="localCompany.company"
+								required
+								autofocus/>
+								<div class="help-block text-danger form-warning"
+                                     ng-if="myForm.company.$dirty"
+                                     ng-messages="myForm.company.$error">
+                                    <div ng-message="required">Company is required.</div>
+								</div>
+							</label>
+						</div>
+						<div class="form-row">
+							<label> <span>Amount:</span> <input
+								class="form-control" id="amount" name="amount"
+								type="number" ng-model="localCompany.amount"
+								required
+								autofocus  />
+								<div class="help-block text-danger form-warning"
+									ng-if="myForm.amount.$dirty"
+									ng-messages="myForm.amount.$error">
+									<div ng-message="required">Amount is required.</div>
+								</div>
+							</label>
+						</div>
+						
+						<div class="form-row">
+						
+						
+							<label> <span>Start Range:</span> <input
+								class="form-control" id="startRange" name="startRange"
+								type="number" ng-model="localCompany.startRange"
+								required
+								autofocus />
+								<div class="help-block text-danger form-warning"
+                                     ng-if="myForm.startRange.$dirty"
+                                     ng-messages="myForm.startRange.$error">
+                                    <div ng-message="required">Start Range is required.</div>
+								</div>
+							</label>
+						</div>
+						<div class="form-row">
+						
+						
+							<label> <span>End Range:</span> <input
+								class="form-control" id="endRange" name="endRange"
+								type="number" ng-model="localCompany.endRange"
+								required
+								autofocus />
+								<div class="help-block text-danger form-warning"
+                                     ng-if="myForm.endRange.$dirty"
+                                     ng-messages="myForm.endRange.$error">
+                                    <div ng-message="required">End Range is required.</div>
+								</div>
+							</label>
+						</div>
+
+						<div class="form-row">
+							<input class="bt bt-blue" type="button" ng-disabled="myForm.$invalid && canCreate()"
+								style="float: right; margin-left: 5px; width: 35%;"
+								ng-click="execute()" value="ADD" />
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

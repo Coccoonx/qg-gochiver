@@ -1,0 +1,98 @@
+<div class="wrapper">
+	<!-- header start -->
+	<header>
+		<div class="header">
+			<div class="container">
+				<div class="top-nav">
+					<ul>
+						<span class="app_signature"><a
+							href="#/transactions" style="border: none;"><img alt="logo app"
+								src="../images/libreexchange_logo.png"
+								style="width: 30px; height: 30px;">&nbsp;&nbsp; 
+								<span style="color: #000; font-size: 24px; vertical-align: super;">Go Archive Portal</span></a>
+						</span>
+						<li class="active"><a  href="#/paroisses">PAROISSES</a></li>
+						<li ><a  href="#/pasteurs">PASTEURS</a></li>
+					</ul>
+				</div>
+				<div class="top-right">
+					<ul>
+						<li class="user dropdown"><a href="#/logout">Log out</a>
+<!-- 							<div class="dropdown-content"> -->
+<!-- 								<a href="#/logout">Log out</a> -->
+<!-- 							</div> -->
+							</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<div class="white-box">
+
+		<div class="heading">
+<!-- 			<div class="content-left"> -->
+<!-- 				<p>  -->
+<!-- 					<img alt="BACK" src="../images/back.png" ng-click="close()" style="float: right;"> -->
+<!-- 				</p> -->
+<!-- 			</div> -->
+			
+			
+			
+			<div class="content-left">
+				<h2>Paroisses</h2>
+			</div>
+			<div class="content-right top-space">
+				<div class="bottom-button">
+					<ul>
+						<li>
+						<input class="bt bt-blue" type="button" ng-click="creerParoisse()" 
+						value="Creer Paroisse" id="makeWithFakeUser" />
+						</li>
+<!-- 						<li> -->
+<!-- 						<input class="bt bt-blue" type="button" ng-click="getAndVerifyTransaction()"  -->
+<!-- 						value="Verify" id="verify" /> -->
+<!-- 						</li> -->
+<!-- 						<li> -->
+<!-- 						<input class="bt bt-blue" type="button" ng-click="confirmFakeTransactions()"  -->
+<!-- 						value="Confirm" id="confirmTransaction" /> -->
+<!-- 						</li> -->
+<!-- 						<li> -->
+<!-- 						<input class="bt bt-blue" type="button" ng-click="getTransactionToConfirmAndConfirmOtherParty()"  -->
+<!-- 						value="Confirm Other Party" id="confirmOtherParty" /> -->
+<!-- 						</li> -->
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+
+		<div ng-show="showLoading && !showAPIFail">
+			<img src="images/loader-small.gif" class="loader-top">
+		</div>
+		
+		<div style="margin-top: 61px; margin-left: 8px;">
+			<div ui-grid="gridOptions" ui-grid-pagination ui-grid-selection class="grid"
+				style="height: 450px;" ui-grid-resize-columns></div>
+
+			<br />
+			<p></p>
+			<p></p>
+			<div class="content-right top-space">
+				<div class="bottom-button">
+					<ul>
+						<li><input type="button" class="bt bt-blue"
+							value="Afficher" ng-disabled="isActive()"
+							ng-click="viewTransaction()"></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		
+
+	</div>
+	<!-- content end -->
+
+</div>

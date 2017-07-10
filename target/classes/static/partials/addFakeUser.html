@@ -1,0 +1,139 @@
+
+<div align="center" ng-show="showLoading && !showAPIFail">
+	<img src="images/loader.gif" class="loader">
+</div>
+<div ng-show="!showLoading" id="main">
+	<div class="wrapper">
+		<!-- header start -->
+		<header>
+			<div class="header">
+				<div class="container">
+					<div class="top-nav">
+						<ul>
+						<span class="app_signature"><a
+							href="#/transactions" style="border: none;"><img alt="logo app"
+								src="../images/libreexchange_logo.png"
+								style="width: 30px; height: 30px;">&nbsp;&nbsp; 
+								<span style="color: #000; font-size: 24px; vertical-align: super;">Go Archive Portal</span></a>
+						</span>
+					</ul>
+					</div>
+					<div class="top-right">
+						<ul>
+							<li class="user dropdown"><a href="#/logout">Log out</a>
+<!-- 							<div class="dropdown-content"> -->
+<!-- 								<a href="#/logout">Log out</a> -->
+<!-- 							</div> -->
+							</li>
+
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header end -->
+		<div class="signup-main">
+			<div class="signup">
+				<div class="signup-box">
+
+					<img alt="CLOSE" src="../images/close.png" ng-click="close()" style="float: right;">
+					
+					<div class="form-title-row">
+						<h3>Create a new fake customer:</h3>
+					</div>
+							
+						
+					<br />
+
+
+					<form class="form-basic" name="myForm">
+
+						<div class="form-row">
+							<label> <span>First Name:</span> <input
+								class="form-control" id="firstname" name="firstname"
+								type="text" ng-model="customer.firstname"
+								required
+								autofocus />
+								<div class="help-block text-danger form-warning"
+                                     ng-if="myForm.firstname.$dirty"
+                                     ng-messages="myForm.firstname.$error">
+                                    <div ng-message="required">First Name is required.</div>
+								</div>
+							</label>
+						</div>
+						<div class="form-row">
+							<label> <span>Last Name:</span> <input
+								class="form-control" id="lastname" name="lastname"
+								type="text" ng-model="customer.lastname"
+								required
+								autofocus />
+								<div class="help-block text-danger form-warning"
+									ng-if="myForm.lastname.$dirty"
+									ng-messages="myForm.lastname.$error">
+									<div ng-message="required">Last Name is required.</div>
+								</div>
+							</label>
+						</div>
+						
+						<div class="form-row">
+							<label> <span>Phone Number:</span> 
+								<input type="tel" id="phone" >
+								<span></span>
+								<span ng-style="customStyle.style">{{valid}}</span>
+								
+<!-- 							<input class="form-control" type="tel" id="phone" name="phoneNumber"  -->
+<!-- 								ng-model="customer.phone"> -->
+							</label>
+						</div>
+						
+                        <div class="form-row">
+                            <label> <span>Country :</span> 
+                            	<select style="width: 191px;" class="form-control" id="address-country" ng-model="customer.countryselected"></select>
+                            </label>
+                        </div>
+
+						
+						<div class="form-row">
+						
+						
+							<label> <span>Email address:</span> <input
+								class="form-control" id="email" name="email"
+								type="email" ng-model="customer.email"
+								required
+								autofocus />
+								<div class="help-block text-danger form-warning"
+                                     ng-if="myForm.email.$dirty"
+                                     ng-messages="myForm.email.$error">
+                                    <div ng-message="required">Email address is required.</div>
+                                    <div ng-message="email">Please enter a valid email address.</div>
+								</div>
+							</label>
+						</div>
+
+						<div class="form-row">
+							<label> <span>City:</span> <input
+								class="form-control" id="city" name="city"
+								type="text" ng-model="customer.city"
+								required
+								autofocus />
+								<div class="help-block text-danger form-warning"
+									ng-if="myForm.city.$dirty"
+									ng-messages="myForm.city.$error">
+									<div ng-message="required">You must enter a City.</div>
+								</div>
+							</label>
+						</div>
+
+						<div class="form-row">
+							<input class="bt bt-blue" type="button" ng-disabled="myForm.$invalid && canCreate()"
+								style="float: right; margin-left: 5px; width: 35%;"
+								ng-click="execute()" value="Create Fake User " />
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

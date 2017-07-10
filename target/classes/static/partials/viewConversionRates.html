@@ -1,0 +1,85 @@
+<div class="wrapper">
+	<!-- header start -->
+	<header>
+		<div class="header">
+			<div class="container">
+				<div class="top-nav">
+					<ul>
+						<span class="app_signature"><a
+							href="#/transactions" style="border: none;"><img alt="logo app"
+								src="../images/libreexchange_logo.png"
+								style="width: 30px; height: 30px;">&nbsp;&nbsp; 
+								<span style="color: #000; font-size: 24px; vertical-align: super;">Go Archive Portal</span></a>
+						</span>
+					</ul>
+				</div>
+				<div class="top-right">
+					<ul>
+						<li class="user dropdown"><a href="#/logout">Log out</a>
+<!-- 							<div class="dropdown-content"> -->
+<!-- 								<a href="#/logout">Log out</a> -->
+<!-- 							</div> -->
+							</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<div class="white-box">
+
+		<div class="heading">
+			<div class="content-left">
+				<p> 
+					<img alt="BACK" src="../images/back.png" ng-click="back()" style="float: right;">
+				</p>
+			</div>
+			
+			
+			
+			<div class="content-left">
+				<h2>Conversion Rates</h2>
+			</div>
+			
+			<div class="content-right top-space">
+				<div class="bottom-button">
+					<ul>
+						<li>
+						<input class="bt bt-blue" type="button" ng-click="addConversionRate()" 
+						value="ADD" id="addConversionRate" />
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+
+		<div ng-show="showLoading && !showAPIFail">
+			<img src="images/loader-small.gif" class="loader-top">
+		</div>
+		
+		<div style="margin-top: 61px; margin-left: 8px;">
+			<div ui-grid="gridOptions" ui-grid-pagination ui-grid-selection class="grid"
+				style="height: 450px;" ui-grid-resize-columns></div>
+
+			<br />
+			<p></p>
+			<p></p>
+			<div class="content-right top-space">
+				<div class="bottom-button">
+					<ul>
+						<li><input type="button" class="bt bt-blue"
+							value="Delete" ng-disabled="isActive()"
+							ng-click="deleteConversionRate()"></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		
+
+	</div>
+	<!-- content end -->
+
+</div>

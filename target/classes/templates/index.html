@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+<!-- <base href="/" /> -->
+<meta charset="utf-8" />
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+<meta name="viewport" content="width=device-width" />
+<title>EEC MunZeu Admin Portal</title>
+
+
+<link
+	href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+	rel="stylesheet" />
+<!-- 	remove chinese in ui-grid -->
+<link href="http://ui-grid.info/release/ui-grid-unstable.css"
+	rel="stylesheet" />
+
+<link
+	href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+	rel="stylesheet" />
+
+<!-- <link -->
+<!-- 	href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" -->
+<!-- 	rel="stylesheet" /> -->
+<!-- <link -->
+<!-- 	href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" -->
+<!-- 	rel="stylesheet" /> -->
+<!-- <link rel="stylesheet" href="./stylesheets/qunit.css" /> -->
+<!-- <link rel="stylesheet" -->
+<!-- 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"></link> -->
+
+<link href="favicon.ico" rel="shortcut icon"/>
+
+<!-- 	Production Mode -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+<link href="http://ui-grid.info/release/ui-grid-unstable.css"
+	rel="stylesheet" />
+<!-- <link rel="stylesheet" media="screen" -->
+<!-- 	href="https://fontlibrary.org/face/lato-regular" type="text/css" /> -->
+
+<!-- 	Development Mode -->
+
+<!-- <link href="./stylesheets/ui-grid.min.css" rel="stylesheet" /> -->
+<!-- <link rel="stylesheet" href="./stylesheets/sweetalert.css" /> -->
+<!-- <link rel="stylesheet" href="./stylesheets/ui-grid-unstable.css" /> -->
+
+<!-- Common Mode -->
+<!-- <link rel="stylesheet" href="./stylesheets/bootstrap.css" ></link> -->
+<link rel="stylesheet" href="./stylesheets/streamly-style.css" />
+<link rel="stylesheet" href="./stylesheets/form-basic.css" />
+<link rel="stylesheet" href="./stylesheets/column.css" />
+<link rel="stylesheet" href="./stylesheets/menu.css" />
+<!-- <link rel="stylesheet" href="./stylesheets/intlTelInput.css" /> -->
+
+
+<link href="./stylesheets/angular-toastr.css" rel="stylesheet" />
+<link rel="stylesheet" href="./stylesheets/twitter.css"/>
+<link href="//cdn.jsdelivr.net/animatecss/3.2.0/animate.css"
+	rel="stylesheet"/>
+<!-- <link -->
+<!-- 	href="//fonts.googleapis.com/css?family=Roboto|Montserrat:300,400,700|Open+Sans:400,300,600" -->
+<!-- 	rel="stylesheet"></link> -->
+
+<!--  used for dashboard -->
+<!-- <link rel="stylesheet" href="./stylesheets/metisMenu.min.css" /> -->
+<!-- <link rel="stylesheet" href="./stylesheets/timeline.css" /> -->
+<!-- <link rel="stylesheet" href="./stylesheets/sb-admin-2.css" /> -->
+<!-- <link rel="stylesheet" href="./stylesheets/morris.css" /> -->
+<!-- <link rel="stylesheet" href="./stylesheets/font-awesome.min.css" /> -->
+<!--  END used for dashboard -->
+
+</head>
+
+<body>
+	<div ui-view=""
+		style="margin-left: 5px; margin-right: 5px; width: 100%"></div>
+		
+
+	<!-- Third-party Libraries -->
+	<!-- 	Production Mode -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- 		<script src="https://code.jquery.com/jquery-1.11.3.js"></script> -->
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	
+	<script
+		src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>
+
+
+	<script src="vendor/angular-idle.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-animate.min.js"></script>
+	
+
+	<!-- 	Development Mode -->
+	<!-- 	<script src="vendor/angular.js"></script> -->
+	<!-- 	<script src="vendor/ui-grid.js"></script> -->
+	<!-- 	<script src="vendor/jquery-1.11.3.min.js"></script> -->
+	<!-- 	<script src="vendor/angular-idle.js"></script> -->
+	<!-- 	<script src="vendor/bootstrap.min.js"></script> -->
+	<!-- 	<script src="vendor/angular-animate.js"></script> -->
+
+
+	<!-- Common Mode -->
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-touch.js"></script>
+<!-- 	<script -->
+<!--       src="https://rawgit.com/Bluefieldscom/intl-tel-input/master/lib/libphonenumber/build/utils.js"></script> -->
+      
+
+<!--     <script -->
+<!--       src="https://rawgit.com/mareczek/international-phone-number/master/releases/international-phone-number.js"></script> -->
+
+	
+
+
+	<script src="vendor/angular-messages.js"></script>
+	<script src="vendor/angular-resource.js"></script>
+	<script src="vendor/angular-sanitize.js"></script>
+	<script src="vendor/angular-ui-router.js"></script>
+	<script src="vendor/angular-toastr.tpls.js"></script>
+	<script src="vendor/satellizer.js"></script>
+	<script src="vendor/ngStorage.js"></script>
+	<script src="vendor/ng-file-upload-shim.min.js"></script>
+	<script src="vendor/ng-file-upload.min.js"></script>
+	<script src="vendor/ion.rangeSlider.min.js"></script>
+	<script src="vendor/bootstrap-submenu.min.js"></script>
+	<script src="vendor/bootstrap-filestyle.min.js"></script>
+	<script src="vendor/sweetalert.min.js"></script>
+	<script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
+	<script src="vendor/angular-base64.min.js"></script>
+	<script src="vendor/aws-sdk.min.js"></script>
+	<script src="vendor/angucomplete-alt.min.js"></script>
+<!-- 	<script src="vendor/intlTelInput.js"></script> -->
+	<script src="vendor/intlTelInput.min.js"></script>
+<!-- 	<script src="vendor/ng-intl-tel-input.min.js"></script> -->
+	<script src="vendor/utils.js"></script>
+	<script src="vendor/formValidation.min.js"></script>
+	
+
+
+	<!-- Application Code -->
+	<script src="app.js"></script>
+	<script src="controllers/home.js"></script>
+	<script src="controllers/login.js"></script>
+	<script src="controllers/logout.js"></script>
+	<script src="services/account.js"></script>
+	<script src="controllers/addFakeUser.js"></script>
+	<script src="controllers/addFakeRecipient.js"></script>
+	<script src="controllers/paroisseList.js"></script>
+	<script src="controllers/createParish.js"></script>
+	<script src="controllers/pasteurList.js"></script>
+	<script src="controllers/createPastor.js"></script>
+	<script src="controllers/viewrecipients.js"></script>
+	<script src="controllers/transactionDetail.js"></script>
+	<script src="controllers/coTransactionDetail.js"></script>
+	<script src="controllers/resetpassword.js"></script>
+	<script src="controllers/forgotpassword.js"></script>
+	<script src="controllers/viewFakeUsers.js"></script>
+	<script src="controllers/confirm.js"></script>
+	<script src="controllers/confirmZone1.js"></script>
+	<script src="controllers/viewDeposits.js"></script>
+	<script src="controllers/depositDetails.js"></script>
+	<script src="controllers/createAdmin.js"></script>
+	<script src="controllers/viewMaxTransfers.js"></script>
+	<script src="controllers/updateMaxTransfer.js"></script>
+	<script src="controllers/viewLocalCompanies.js"></script>
+	<script src="controllers/addLocalCompany.js"></script>
+	<script src="controllers/verify.js"></script>
+	<script src="controllers/viewConversionRates.js"></script>
+	<script src="controllers/addConversionRate.js"></script>
+</body>
+</html>

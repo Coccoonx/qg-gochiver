@@ -1,0 +1,45 @@
+<div  ng-show="showLoading && !showAPIFail" >
+	<img src="images/loader-small.gif" class="loader-top">
+</div>
+<div class="wrapper">
+	<div class="signup-main">
+		<div class="signup">
+			<img src="images/logo.png" class="home-logo" >
+			<h2>Log In</h2>
+			<div class="signup-box">
+				<form method="post" ng-submit="login()" name="loginForm">
+					<p>
+						<input type="email" class="email" ng-model="user.email"
+							placeholder="Email" name="email" required autofocus>
+						<div class="help-block text-danger form-warning"
+                                     ng-if="loginForm.email.$dirty"
+                                     ng-messages="loginForm.email.$error">
+                                    <div ng-message="required">Email address is required.</div>
+                                    <div ng-message="email">Please enter a valid email address.</div>
+								</div>
+					</p>
+					<p>
+						<input type="password" class="password" value="Password" name="password"
+							ng-model="user.password" placeholder="Password" minlength="8" required
+							autofocus>
+						<div class="help-block text-danger"
+							ng-if="loginForm.password.$dirty"
+							ng-messages="loginForm.password.$error">
+							<div ng-message="required">Password is required.</div>
+							<div ng-message="minlength, maxlength">Password must have
+								at least 8 characters.</div>
+						</div>
+						
+					</p>
+
+					<p class="button">
+						<input name="Submit" type="submit" value="Log In"
+							ng-disabled="loginForm.$invalid">
+					</p>
+				</form>
+				
+			</div>
+
+		</div>
+	</div>
+</div>

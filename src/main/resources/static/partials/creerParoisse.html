@@ -1,0 +1,169 @@
+
+<div align="center" ng-show="showLoading && !showAPIFail">
+	<img src="images/loader.gif" class="loader">
+</div>
+<div ng-show="!showLoading" id="main">
+	<div class="wrapper">
+		<!-- header start -->
+		<header>
+			<div class="header">
+				<div class="container">
+					<div class="top-nav">
+						<ul>
+						<span class="app_signature"><a
+							href="#/transactions" style="border: none;"><img alt="logo app"
+								src="../images/libreexchange_logo.png"
+								style="width: 30px; height: 30px;">&nbsp;&nbsp; 
+								<span style="color: #000; font-size: 24px; vertical-align: super;">EEC MunZeu Admin Portal</span></a>
+						</span>
+					</ul>
+					</div>
+					<div class="top-right">
+						<ul>
+							<li class="user dropdown"><a href="#/logout">Log out</a>
+<!-- 							<div class="dropdown-content"> -->
+<!-- 								<a href="#/logout">Log out</a> -->
+<!-- 							</div> -->
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header end -->
+		<div class="signup-main">
+		
+			<div class="signup">
+				<div class="signup-box">
+
+					<img alt="CLOSE" src="../images/close.png" ng-click="close()" style="float: right;">
+					
+				    <div class="form-title-row">
+						<h3>Creer une Paroisse</h3>
+					</div>
+					<br />
+
+
+					<form class="form-basic" name="myForm">
+
+						<div class="form-row">
+							<label> <span>Nom de la Paroisse:</span> <input
+									class="form-control" id="displayName" name="displayName"
+									type="text" ng-model="parish.displayName"
+									required
+									autofocus />
+								<div class="help-block text-danger form-warning"
+									 ng-if="myForm.displayName.$dirty"
+									 ng-messages="myForm.displayName.$error">
+									<div ng-message="required">Champ requis.</div>
+								</div>
+							</label>
+						</div>
+						
+						<div class="form-row">
+							<label> <span>District:</span> <input
+									class="form-control" id="district" name="district"
+									type="text" ng-model="parish.district"
+									required
+									autofocus />
+								<div class="help-block text-danger form-warning"
+									 ng-if="myForm.district.$dirty"
+									 ng-messages="myForm.district.$error">
+									<div ng-message="required">Champ requis.</div>
+								</div>
+							</label>
+						</div>
+						
+						<div class="form-row">
+							<label> <span>Nombre de Fideles:</span> <input
+									class="form-control" id="numberOfDevoted" name="numberOfDevoted"
+									type="text" ng-model="parish.numberOfDevoted"
+									
+									autofocus />
+<!-- 								<div class="help-block text-danger form-warning" -->
+<!-- 									 ng-if="myForm.numberOfDevoted.$dirty" -->
+<!-- 									 ng-messages="myForm.numberOfDevoted.$error"> -->
+<!-- 									<div ng-message="required">Champ requis.</div> -->
+<!-- 								</div> -->
+							</label>
+						</div>
+						
+						<div class="form-row">
+							<label> <span>Site Web :</span> <input
+									class="form-control" id="website" name="website"
+									type="text" ng-model="parish.website"
+									
+									autofocus />
+<!-- 								<div class="help-block text-danger form-warning" -->
+<!-- 									 ng-if="myForm.website.$dirty" -->
+<!-- 									 ng-messages="myForm.website.$error"> -->
+<!-- 									<div ng-message="required">Champ requis.</div> -->
+<!-- 								</div> -->
+							</label>
+						</div>
+
+
+						<div class="form-row">
+							<label> <span>Latitude :</span> <input
+									class="form-control" id="latitude" name="latitude"
+									type="text" ng-model="parish.latitude"
+									required
+									autofocus />
+								<div class="help-block text-danger form-warning"
+									 ng-if="myForm.latitude.$dirty"
+									 ng-messages="myForm.latitude.$error">
+									<div ng-message="required">Champ requis.</div>
+								</div>
+							</label>
+						</div>
+						
+						
+<!--                         <div class="form-row"> -->
+<!--                             <label> <span>Country :</span>  -->
+<!--                             	<select style="width: 191px;" class="form-control" id="address-country" ng-model="customer.countryselected"></select> -->
+<!--                             </label> -->
+<!--                         </div> -->
+						
+						
+						<div class="form-row">
+							<label> <span>Longitude:</span> <input
+									class="form-control" id="longitude" name="email"
+									type="text" ng-model="parish.longitude"
+									required
+									autofocus />
+								<div class="help-block text-danger form-warning"
+									 ng-if="myForm.longitude.$dirty"
+									 ng-messages="myForm.longitude.$error">
+									<div ng-message="required">Champ requis.</div>
+								</div>
+							</label>
+						</div>
+
+						
+						<div class="form-row">
+							<label> <span>Lien de l'image de la paroisse:</span> <input
+									class="form-control" id="url" name="url"
+									type="text" ng-model="parish.url"
+									required
+									autofocus />
+								<div class="help-block text-danger form-warning"
+									 ng-if="myForm.url.$dirty"
+									 ng-messages="myForm.url.$error">
+									<div ng-message="required">Champ requis.</div>
+								</div>
+							</label>
+						</div>
+						
+						<div class="form-row">
+							<input class="bt bt-blue" type="button" ng-disabled="myForm.$invalid && canCreate()"
+								   style="float: right; margin-left: 5px; width: 35%;"
+								   ng-click="createParish()" value="Creer" />
+						</div>
+				    
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>

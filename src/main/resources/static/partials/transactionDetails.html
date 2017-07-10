@@ -1,0 +1,435 @@
+
+<div class="wrapper">
+	<!-- header start -->
+	<header>
+		<div class="header">
+			<div class="container">
+				<div class="top-nav">
+					<ul>
+						<span class="app_signature""><a
+							href="#/transactions" style="border: none;"><img alt="logo app"
+								src="../images/libreexchange_logo.png"
+								style="width: 30px; height: 30px;">&nbsp;&nbsp; 
+								<span style="color: #000; font-size: 24px; vertical-align: super;">Go Archive Portal</span></a>
+						</span>
+					</ul>
+				</div>
+				<div class="top-right">
+					<ul>
+						<li class="user dropdown"><a href="#/logout">Log out</a>
+<!-- 							<div class="dropdown-content"> -->
+<!-- 								<a href="#/logout">Log out</a> -->
+<!-- 							</div> -->
+							</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- header end -->
+	<!-- content start -->
+	<div class="white-box-details">
+
+		<div class="heading">
+		    
+			<div class="content-left">
+				<h2>Transaction's Details Info</h2>
+			</div>
+			<div class="content-right">
+					<img alt="CLOSE" src="../images/close.png" ng-click="close()">
+			</div>
+		</div>
+		<div class="col-md-12" style="margin-top: 2%; padding-left: 0px;">
+			<div class="col-md-4" style="padding-left: 0px; padding-right: 5px;">
+				<table>
+					<tr>
+						<td style="width:35%;">Id :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{id}}</td>
+					</tr>
+					<tr>
+						<td style="width:15%;">Amount Sent :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{amount}}</td>
+					</tr>
+					<tr>
+						<td style="width:35%;">Source Currency :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{sourceCurrency}}</td>
+					</tr>
+					<tr>
+						<td style="width:35%;">Amount Received :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{receivedAmount}}</td>
+					</tr>
+					<tr>
+						<td style="width:35%;">Target Currency :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{targetCurrency}}</td>
+					</tr>
+					<tr>
+						<td style="width:35%;">Transaction Number :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{transactionNumber}}</td>
+					</tr>
+					<tr>
+						<td style="width:35%;">Longitude :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{longitude}}</td>
+					</tr>
+				</table>
+			</div>
+			
+
+			<div class="col-md-4" style="margin-left: 3%;">
+				<table>
+				    <tr>
+						<td style="width:60%;">Saved Amount :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{savedAmount}}</td>
+					</tr>
+					<tr>
+						<td  style="width:50%;">Status: </td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{status}}</td>
+					</tr>
+					<tr>
+						<td style="width:50%;">Creation Date :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{createDate}}</td>
+					</tr>
+					<tr>
+						<td style="width:50%;">Last Update Date :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{lastUpdateDate}}</td>
+					</tr>
+					<tr>
+						<td style="width:50%;">Latitude :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{latitude}}</td>
+					</tr>
+					<tr>
+						<td style="width:50%;">Local company :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{localCompany}}</td>
+					</tr>
+					<tr>
+						<td style="width:50%;">Comment :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{comment}}</td>
+					</tr>
+<!-- 					<tr> -->
+<!-- 						<td style="width:50%;">Status Message :</td> -->
+<!-- 						<td>&nbsp;</td> -->
+<!-- 						<td style="float: right; font-weight: bold;">{{statusMessage}}</td> -->
+<!-- 					</tr> -->
+				</table>
+			</div>
+			<div class="col-md-12"
+			style="margin-top: 35px;  padding-left: 0px;">
+			<div width="100%" style="height: 180px;">
+			<!-- Recipient In  -->
+			<div class="heading">
+				<div class="content-left">
+					<h3>Recipient's Details Info</h3>
+				</div>
+		</div>
+				<div class="col-md-12" style="margin-top: 2%; padding-left: 0px;">
+				<div class="col-md-4" style="padding-left: 0px; padding-right: 5px;">
+				<table>
+					<tr>
+						<td style="width:35%;">Id :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{recipientId}}</td>
+					</tr>
+					<tr>
+						<td style="width:15%;">User name :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{recipientUsername}}</td>
+					</tr>
+					<tr>
+						<td style="width:35%;">Zone :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{recipientZone}}</td>
+					</tr>
+					<tr>
+						<td style="width:35%;">Description :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{recipientDescription}}</td>
+					</tr>
+					<tr>
+						<td style="width:35%;">Transit Number :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{recipientTransitNumber}}</td>
+					</tr>
+					<tr>
+						<td style="width:35%;">Recipient Number :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{recipientRecipientNumber}}</td>
+					</tr>
+					<tr>
+						<td style="width:35%;">Swift :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{recipientSwift}}</td>
+					</tr>
+					<tr>
+						<td style="width:15%;">Iban :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{recipientIban}}</td>
+					</tr>
+					<tr>
+						<td style="width:35%;">Bank Name :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{recipientBankName}}</td>
+					</tr>
+					<tr>
+						<td style="width:35%;">City :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{recipientCity}}</td>
+					</tr>
+					<tr>
+						<td style="width:35%;">Phone :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{recipientPhone}}</td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-md-4" style="margin-left: 3%;">
+				<table>
+				    <tr>
+						<td style="width:60%;">Create Date :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{recipientCreateDate}}</td>
+					</tr>
+					<tr>
+						<td style="width:50%;">Last Update Date :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{recipientLastUpdateDate}}</td>
+					</tr>
+					<tr>
+						<td  style="width:50%;">Email: </td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{recipientEmail}}</td>
+					</tr>
+					<tr>
+						<td style="width:50%;">Status :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{recipientStatus}}</td>
+					</tr>
+					<tr>
+						<td style="width:50%;">Currency :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{recipientCurrency}}</td>
+					</tr>
+					<tr>
+						<td style="width:50%;">First name :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{recipientFirstName}}</td>
+					</tr>
+				    <tr>
+						<td style="width:50%;">Last name :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{recipientLastName}}</td>
+					</tr>
+					<tr>
+						<td style="width:50%;">State :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{recipientState}}</td>
+					</tr>
+					<tr>
+						<td  style="width:50%;">Country: </td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{recipientCountry}}</td>
+					</tr>
+					
+				</table>
+				
+				<!-- Added -->
+				
+				
+				<!-- Added -->
+				
+			</div>
+			</div>
+			
+			
+			<div class="heading">
+				<div class="content-left">
+					<h3>Customer's Details Info</h3>
+				</div>
+		</div>
+		<div class="col-md-12" style="margin-top: 2%; padding-left: 0px;">
+			<div class="col-md-4" style="padding-left: 0px; padding-right: 5px;">
+				<table>
+					<tr>
+						<td style="width:35%;">First name :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{customerFirstName}}</td>
+					</tr>
+					<tr>
+						<td style="width:15%;">Last name :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{customerLastName}}</td>
+					</tr>
+					<tr>
+						<td style="width:35%;">Email :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{customerEmail}}</td>
+					</tr>
+					<tr>
+						<td style="width:35%;">Status :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{customerStatus}}</td>
+					</tr>
+					<tr>
+						<td style="width:35%;">Zone :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{customerZone}}</td>
+					</tr>
+					<tr>
+						<td style="width:35%;">Creation Date :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{customerCreateDate}}</td>
+					</tr>
+					<tr>
+						<td style="width:35%;">Last Update Date :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{customerLastUpdateDate}}</td>
+					</tr>
+					
+					<tr>
+						<td style="width:35%;">Currency :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{customerCurrency}}</td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="col-md-4" style="margin-left: 3%;">
+				<table>
+					<tr>
+						<td style="width:60%;">City :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{customerCity}}</td>
+					</tr>
+					<tr>
+						<td style="width:50%;">Language :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{customerLanguage}}</td>
+					</tr>
+					
+					<tr>
+						<td style="width:50%;">Phone :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{customerPhone}}</td>
+					</tr>
+					<tr>
+						<td  style="width:50%;">State: </td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{customerState}}</td>
+					</tr>
+					<tr>
+						<td style="width:50%;">Country :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{customerCountry}}</td>
+					</tr>
+					<tr>
+						<td style="width:50%;">ZipCode :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{customerZipCode}}</td>
+					</tr>
+					
+					<tr>
+						<td style="width:50%;">Enabled :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{customerEnabled}}</td>
+					</tr>
+					<tr>
+						<td  style="width:50%;">Activation Code: </td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{customerActivationCode}}</td>
+					</tr>
+				</table>
+			</div>
+			</div>
+
+           <div class="heading">
+				<div class="content-left">
+					<h3>Transaction's Arfifact Info</h3>
+				</div>
+		</div>
+		<div class="col-md-12" style="margin-top: 2%; padding-left: 0px;">
+			<div class="col-md-4" style="padding-left: 0px; padding-right: 5px;">
+				<table>
+					<tr>
+						<td style="width:35%;">Id :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{artifactsId}}</td>
+					</tr>
+					<tr>
+						<td style="width:15%;">Url :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{artifactsUrl}}</td>
+					</tr>
+					<tr>
+						<td style="width:35%;">Creation Date :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{artifactsCreateDate}}</td>
+					</tr>
+					<tr>
+						<td style="width:35%;">Last Update Date :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{artifactsLastUpdateDate}}</td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-md-4" style="margin-left: 3%;">
+				<table>
+					<tr>
+						<td style="width:60%;">Extension :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{artifactsExtension}}</td>
+					</tr>
+					<tr>
+						<td style="width:50%;">Size In Bytes :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{artifactsSizeInBytes}}</td>
+					</tr>
+					
+					<tr>
+						<td style="width:50%;">Name :</td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{artifactsName}}</td>
+					</tr>
+					<tr>
+						<td  style="width:50%;">Description: </td>
+						<td>&nbsp;</td>
+						<td style="float: right; font-weight: bold;">{{artifactsDescription}}</td>
+					</tr>
+				</table>
+			</div>
+			</div>
+
+		
+		<div class="content-right top-space">
+				<div class="bottom-button">
+					<ul>
+						
+						<li><input type="button" class="bt bt-blue"
+							value="View CoTransaction" ng-disabled="isActive()"
+							ng-click="getCoTransaction()"></li>
+					</ul>
+				</div>
+			</div>
+		
+				<!-- Out -->
+				</div>
+
+		</div>
+			<br>
+		</div>
+		<!-- content end -->
+		
+	</div>
+</div>

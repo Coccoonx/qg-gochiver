@@ -1,0 +1,110 @@
+
+<div align="center" ng-show="showLoading && !showAPIFail">
+	<img src="images/loader.gif" class="loader">
+</div>
+<div ng-show="!showLoading" id="main">
+	<div class="wrapper">
+		<!-- header start -->
+		<header>
+			<div class="header">
+				<div class="container">
+					<div class="top-nav">
+						<ul>
+						<span class="app_signature""><a
+							href="#/transactions" style="border: none;"><img alt="logo app"
+								src="../images/libreexchange_logo.png"
+								style="width: 30px; height: 30px;">&nbsp;&nbsp; 
+								<span style="color: #000; font-size: 24px; vertical-align: super;">Go Archive Portal</span></a>
+						</span>
+					</ul>
+					</div>
+					<div class="top-right">
+						<ul>
+							<li class="user dropdown"><a href="#/logout">Log out</a>
+<!-- 							<div class="dropdown-content"> -->
+<!-- 								<a href="#/logout">Log out</a> -->
+<!-- 							</div> -->
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header end -->
+		<div class="signup-main">
+			<div class="signup">
+				<div class="signup-box">
+
+					<!-- 				<input type="button" ng-click="close()" value="Close" -->
+<!-- 					class="bt bt bt bt-black"> -->
+					<img alt="CLOSE" src="../images/close.png" ng-click="close()" style="float: right;">
+					
+					<div class="form-title-row">
+						<h3>Verify transfer:</h3>
+					</div>
+							
+						
+					<br />
+
+
+					<form class="form-basic">
+
+						<div class="form-row">
+							<label> <span>Question :</span> <input
+								class="form-control" id="question" name="question"
+								type="text" ng-model="transferToVerify.question"
+								ng-init="transferToVerify.question=foo"
+								ng-pattern="/^[a-zA-Z]+(-?[a-zA-Z0-9]+)*$/" required
+								 required
+								autofocus/>
+								<div class="help-block text-danger"
+									ng-if="myForm.question.$dirty"
+									ng-messages="myForm.question.$dirty.$error">
+								</div>
+							</label>
+						</div>
+						<div class="form-row">
+							<label> <span>Answer:</span> <input
+								class="form-control" id="answer" name="answer"
+								type="text" ng-model="transferToVerify.answer"
+								ng-init="transferToVerify.answer=foo"
+								ng-pattern="/^[a-zA-Z]+(-?[a-zA-Z0-9]+)*$/" required
+								autofocus/>
+								<div class="help-block text-danger"
+									ng-if="myForm.answer.$dirty"
+									ng-messages="myForm.answer.$dirty.$error">
+								</div>
+							</label>
+						</div>
+
+						<div class="form-row">
+							<label> <span>Recipient email :</span> <input
+								class="form-control" id="email" name="email"
+								type="email" ng-model="transferToVerify.email"
+								ng-init="transferToVerify.email=foo"
+								required
+								autofocus />
+								<div class="help-block text-danger form-warning"
+                                     ng-if="myForm.email.$dirty"
+                                     ng-messages="myForm.email.$error">
+                                    <div ng-message="required">Email address is required.</div>
+                                    <div ng-message="email">Please enter a valid email address.</div>
+								</div>
+							</label>
+						</div>
+
+
+						<div class="form-row">
+							<input class="bt bt-blue" type="button" ng-disabled="canConfirm()"
+								style="float: right; margin-left: 5px; width: 35%;"
+								ng-click="verifyTransfer()" value="Valid" />
+						</div>
+						
+					</form>
+				    
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,108 @@
+
+<div align="center" ng-show="showLoading && !showAPIFail">
+	<img src="images/loader.gif" class="loader">
+</div>
+<div ng-show="!showLoading" id="main">
+	<div class="wrapper">
+		<!-- header start -->
+		<header>
+			<div class="header">
+				<div class="container">
+					<div class="top-nav">
+						<ul>
+						<span class="app_signature"><a
+							href="#/transactions" style="border: none;"><img alt="logo app"
+								src="../images/libreexchange_logo.png"
+								style="width: 30px; height: 30px;">&nbsp;&nbsp; 
+								<span style="color: #000; font-size: 24px; vertical-align: super;">Go Archive Portal</span></a>
+						</span>
+					</ul>
+					</div>
+					<div class="top-right">
+						<ul>
+							<li class="user dropdown"><a href="#/logout">Log out</a>
+<!-- 							<div class="dropdown-content"> -->
+<!-- 								<a href="#/logout">Log out</a> -->
+<!-- 							</div> -->
+							</li>
+
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header end -->
+		<div class="signup-main">
+			<div class="signup">
+				<div class="signup-box">
+
+					<img alt="CLOSE" src="../images/close.png" ng-click="close()" style="float: right;">
+					
+					<div class="form-title-row">
+						<h3>Update Max transfer:</h3>
+					</div>
+							
+						
+					<br />
+
+
+					<form class="form-basic" name="myForm">
+
+						<div class="form-row">
+							<label> <span>Country:</span> <input
+								class="form-control" id="country" name="country"
+								type="text" ng-model="transfer2.country"
+								ng-init="transfer2.country=foo"
+								required
+								autofocus />
+								<div class="help-block text-danger form-warning"
+                                     ng-if="myForm.country.$dirty"
+                                     ng-messages="myForm.country.$error">
+                                    <div ng-message="required">Country is required.</div>
+								</div>
+							</label>
+						</div>
+						<div class="form-row">
+							<label> <span>Currency:</span> <input
+								class="form-control" id="currency" name="currency"
+								type="text" ng-model="transfer2.currency"
+								ng-init="transfer2.currency=foo"
+								required
+								autofocus  />
+								<div class="help-block text-danger form-warning"
+									ng-if="myForm.currency.$dirty"
+									ng-messages="myForm.currency.$error">
+									<div ng-message="required">Currency is required.</div>
+								</div>
+							</label>
+						</div>
+						
+						<div class="form-row">
+						
+						
+							<label> <span>Max Transfer Amount:</span> <input
+								class="form-control" id="maxTransferAmt" name="maxTransferAmt"
+								type="number" ng-model="transfer2.maxTransferAmt"
+								required
+								autofocus />
+								<div class="help-block text-danger form-warning"
+                                     ng-if="myForm.maxTransferAmt.$dirty"
+                                     ng-messages="myForm.maxTransferAmt.$error">
+                                    <div ng-message="required">Amount is required.</div>
+								</div>
+							</label>
+						</div>
+
+						<div class="form-row">
+							<input class="bt bt-blue" type="button" ng-disabled="myForm.$invalid && canCreate()"
+								style="float: right; margin-left: 5px; width: 35%;"
+								ng-click="execute()" value="Modify" />
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
