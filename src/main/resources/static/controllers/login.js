@@ -8,47 +8,47 @@ angular.module('MyApp')
         $scope.encoded = $base64.encode($scope.user.email+':'+$scope.user.password);
         console.log($scope.encoded);
         $location.path('/paroisses');
-//        $http({
-//       			method: 'POST',
-//       			//for production mode http://libre-exchange.awswouri.com/
-////       			url: 'http://libre-exchange.awswouri.com/admin/login',
-//       			url: 'http://localhost:8080/admin/login',
-//       			headers: {'Authorization': 'Basic '+$scope.encoded},
-//       		    data :  {
-//                		email : $scope.user.email,
-//                		password : $scope.user.password,
-//                }
-//       		}).success(function (response){
-//       			console.log(response);
-////       			response.token=response.email;
-//       			response.data=response;
-//       			$localStorage.token=$scope.encoded;
-//       			$auth.setToken($localStorage.token);
-////       			$auth.removeToken();
-//
-//       			console.log('token '+$auth.getToken());
-//       			$localStorage.accountid=$scope.user.email;
-//       			$localStorage.pwd= $scope.user.password;
-//       			$localStorage.username=response.firstName;
-//       			console.log($localStorage.token);
-//       			$scope.showLoading = true; 
-////       			$scope.getProfile($scope.user.email);
-//       			document.title = "Go Archive Portal";
-//       			$location.path('/transactions');
-////       		}).error(function(error){
-////				$scope.showLoading = false;
-////				$scope.showAPIFail = true;
-////       			toastr.error("Sorry, your email and/or your password are incorrect");
-//       		}).catch(function(error) {
-//       			$scope.showLoading = false;
+        $http({
+       			method: 'POST',
+       			//for production mode http://libre-exchange.awswouri.com/
+//       			url: 'http://libre-exchange.awswouri.com/admin/login',
+       			url: 'http://localhost:4545/customer/register',
+       			headers: {'Authorization': 'Basic '+$scope.encoded},
+       		    data :  {
+                		email : $scope.user.email,
+                		password : $scope.user.password,
+                }
+       		}).success(function (response){
+       			console.log(response);
+//       			response.token=response.email;
+       			response.data=response;
+       			$localStorage.token=$scope.encoded;
+       			$auth.setToken($localStorage.token);
+//       			$auth.removeToken();
+
+       			console.log('token '+$auth.getToken());
+       			$localStorage.accountid=$scope.user.email;
+       			$localStorage.pwd= $scope.user.password;
+       			$localStorage.username=response.firstName;
+       			console.log($localStorage.token);
+       			$scope.showLoading = true;
+//       			$scope.getProfile($scope.user.email);
+       			document.title = "Go Archive Portal";
+       			$location.path('/transactions');
+//       		}).error(function(error){
+//				$scope.showLoading = false;
 //				$scope.showAPIFail = true;
-//				if (error.status === 401) {
-//					toastr.error("Sorry, your email and/or your password are incorrect");
-//			      }else{
-//			    	  toastr.error(error.data.message, error.status);
-//			      }
-//       	 		$auth.removeToken();
-//       	 	 });
+//       			toastr.error("Sorry, your email and/or your password are incorrect");
+       		}).catch(function(error) {
+       			$scope.showLoading = false;
+				$scope.showAPIFail = true;
+				if (error.status === 401) {
+					toastr.error("Sorry, your email and/or your password are incorrect");
+			      }else{
+			    	  toastr.error(error.data.message, error.status);
+			      }
+       	 		$auth.removeToken();
+       	 	 });
    }
 
     $scope.authenticate = function(provider) {

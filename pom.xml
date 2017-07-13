@@ -16,6 +16,42 @@
     <properties>
         <java.version>1.8</java.version>
     </properties>
+
+    <profiles>
+        <profile>
+            <id>local</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <spring.datasource.driverClassName>org.h2.Driver</spring.datasource.driverClassName>
+                <spring.datasource.url>jdbc:h2:file:~/testdb</spring.datasource.url>
+                <spring.datasource.username>sa</spring.datasource.username>
+                <spring.datasource.password>sa</spring.datasource.password>
+                <spring.jpa.database>h2</spring.jpa.database>
+                <spring.datasource.platform>h2</spring.datasource.platform>
+                <spring.jpa.show-sql>true</spring.jpa.show-sql>
+                <spring.jpa.hibernate.ddl-auto>create-drop</spring.jpa.hibernate.ddl-auto>
+            </properties>
+        </profile>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <spring.datasource.driverClassName>org.postgresql.Driver</spring.datasource.driverClassName>
+                <spring.datasource.url>jdbc:postgresql://localhost:5432/qgclouddb</spring.datasource.url>
+                <spring.datasource.username>postgres</spring.datasource.username>
+                <spring.datasource.password>root</spring.datasource.password>
+                <spring.jpa.database>POSTGRESQL</spring.jpa.database>
+                <spring.datasource.platform>postgres</spring.datasource.platform>
+                <spring.jpa.show-sql>true</spring.jpa.show-sql>
+
+                <spring.jpa.hibernate.ddl-auto>update</spring.jpa.hibernate.ddl-auto>
+            </properties>
+        </profile>
+    </profiles>
     
     <dependencies>
         <dependency>

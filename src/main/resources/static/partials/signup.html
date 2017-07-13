@@ -1,0 +1,80 @@
+<div  ng-show="showLoading && !showAPIFail" >
+	<img src="images/loader-small.gif" class="loader-top">
+</div>
+<div class="wrapper">
+	<div class="signup-main">
+		<div class="signup">
+			<img src="images/logo.png" class="home-logo" >
+			<h2>Sign Up</h2>
+			<div class="signup-box">
+				<form method="post" ng-submit="signup()" name="signupForm">
+					<p>
+						<input type="text" class="text" ng-model="user.firstname"
+							placeholder="First Name" name="firstname" required autofocus>
+						<div class="help-block text-danger form-warning"
+                                     ng-if="signupForm.firstname.$dirty"
+                                     ng-messages="signupForm.firstname.$error">
+                                    <div ng-message="required">Valid first name is required.</div>
+                                    <div ng-message="email">Please enter a valid first name.</div>
+								</div>
+					</p>
+					<p>
+						<input type="text" class="text" ng-model="user.lastname"
+							placeholder="Last Name" name="lastname" required autofocus>
+						<div class="help-block text-danger form-warning"
+                                     ng-if="signupForm.lastname.$dirty"
+                                     ng-messages="signupForm.lastname.$error">
+                                    <div ng-message="required">Valid last name is required.</div>
+                                    <div ng-message="email">Please enter a valid last name.</div>
+								</div>
+					</p>
+					<p>
+						<input type="email" class="email" ng-model="user.email"
+							placeholder="Email" name="email" required autofocus>
+						<div class="help-block text-danger form-warning"
+                                     ng-if="signupForm.email.$dirty"
+                                     ng-messages="signupForm.email.$error">
+                                    <div ng-message="required">Email address is required.</div>
+                                    <div ng-message="email">Please enter a valid email address.</div>
+								</div>
+					</p>
+					<p>
+						<input type="password" class="password" value="Password" name="password"
+							ng-model="user.password" placeholder="Password" minlength="8" required
+							autofocus>
+						<div class="help-block text-danger"
+							ng-if="signupForm.password.$dirty"
+							ng-messages="signupForm.password.$error">
+							<div ng-message="required">Password is required.</div>
+							<div ng-message="minlength, maxlength">Password must have
+								at least 8 characters.</div>
+						</div>
+						
+					</p>
+					<p>
+						<input type="password" class="password" value="Password" name="password"
+							ng-model="user.password2" placeholder="Password" minlength="8" required
+							autofocus>
+						<div class="help-block text-danger"
+							ng-if="signupForm.password.$dirty"
+							ng-messages="signupForm.password.$error">
+							<div ng-message="required">Password is required.</div>
+							<div ng-message="minlength, maxlength">Password must have
+								at least 8 characters.</div>
+						</div>
+
+					</p>
+
+					<p class="button">
+						<input name="Submit" type="submit" value="Sign Up"
+							ng-disabled="signupForm.$invalid">
+					</p>
+				</form>
+
+				<p>Have an account ? <a href="#/login">Login</a></p>
+				
+			</div>
+
+		</div>
+	</div>
+</div>

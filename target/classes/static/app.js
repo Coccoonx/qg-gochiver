@@ -20,6 +20,13 @@ angular
 						resolve : {
 							skipIfLoggedIn : skipIfLoggedIn
 						}
+					}).state('signup', {
+						url : '/signup',
+						templateUrl : 'partials/signup.html',
+						controller : 'SignUpCtrl'
+//						resolve : {
+//							skipIfLoggedIn : skipIfLoggedIn
+//						}
 					}).state('registrationconfirm', {
 						url : '/registrationconfirm',
 						templateUrl : 'partials/registrationconfirm.html',
