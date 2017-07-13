@@ -18,7 +18,7 @@ public class DocumentController {
     @Autowired
     DocumentService documentService;
 
-    @RequestMapping(value = "/document/", method = RequestMethod.POST)
+    @RequestMapping(value = "/document/create", method = RequestMethod.POST)
     @ResponseBody
     @Transactional
     public Document createDocument(@RequestBody Document document) {
