@@ -39,4 +39,6 @@ public class Customer {
 
     @ManyToOne
     private Company company;
+
+
 }
