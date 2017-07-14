@@ -7,7 +7,7 @@ angular.module('MyApp')
         $scope.showLoading = true;   
         $scope.encoded = $base64.encode($scope.user.email+':'+$scope.user.password);
         console.log($scope.encoded);
-        $location.path('/paroisses');
+        $location.path('/document');
         $http({
        			method: 'POST',
        			//for production mode http://libre-exchange.awswouri.com/
@@ -34,7 +34,7 @@ angular.module('MyApp')
        			$scope.showLoading = true;
 //       			$scope.getProfile($scope.user.email);
        			document.title = "Go Archive Portal";
-       			$location.path('/transactions');
+       			$location.path('/document');
 //       		}).error(function(error){
 //				$scope.showLoading = false;
 //				$scope.showAPIFail = true;
@@ -55,7 +55,7 @@ angular.module('MyApp')
       $auth.authenticate(provider)
         .then(function() {
           toastr.success('You have successfully signed in with ' + provider + '!');
-          $location.path('/cassandra');
+          $location.path('/document');
         })
         .catch(function(error) {
           if (error.error) {

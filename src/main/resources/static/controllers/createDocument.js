@@ -1,16 +1,16 @@
 angular
 		.module('MyApp')
 		.controller(
-				'createParishCtl',
+				'createDocumentCtl',
 				function($scope, $http, $interval, uiGridConstants, $location,
 						$auth, $localStorage, toastr) {
 					
-					$scope.createParish = function() {
+					$scope.createDocument = function() {
 
 						swal(
 								{
-									title : "<b> Creation de Paroisse </b>",
-									text : "Voulez-vous creez cette paroisse ?",
+									title : "<b> Creation de Document </b>",
+									text : "Voulez-vous creez ce document ?",
 									imageUrl : "images/succes.png",
 									imageSize : "130x130",
 									showCancelButton : true,
@@ -25,23 +25,23 @@ angular
 //										$auth.removeToken();
 										console.log($localStorage.token);
 										var urls = new Array();
-										urls.push($scope.parish.url)
+										urls.push($scope.document.url)
 										$http(
 												{
 													method : 'POST',
-													url : '/parish/',
+													url : '/document/',
 //													headers : {
 //														'Authorization' : 'Basic '
 //																+ $localStorage.token
 //													},
 													data :  {
-														website : $scope.parish.website,
-														displayName : $scope.parish.displayName,
-														longitude : $scope.parish.longitude,
-														latitude : $scope.parish.latitude,
-														numberOfDevoted : $scope.parish.numberOfDevoted,
+														website : $scope.document.website,
+														displayName : $scope.document.displayName,
+														longitude : $scope.document.longitude,
+														latitude : $scope.document.latitude,
+														numberOfDevoted : $scope.document.numberOfDevoted,
 														pictureUrls : urls,
-														district : $scope.parish.district
+														district : $scope.document.district
 														
 												}
 													
@@ -50,10 +50,10 @@ angular
 //													$auth.setToken($localStorage.token);
 									       			console.log(response);
 									       			console.log(response.id);
-									       			document.title = "EEC Munzeu Admin portal";
+									       			document.title = "Go archiver portal";
 									       			$location.path('/paroisses');
 											    	  swal("Success!",
-																"Paroisse créee.",
+																"Document crée.",
 																"success");
 									       			
 									       			
@@ -78,8 +78,8 @@ angular
 					}
 //
 					$scope.close = function() {
-						document.title = "EEC MunZeu Admin portal";
-						$location.path('/paroisses');
+						document.title = "Go archiver portal";
+						$location.path('/document');
 						
 					}
 

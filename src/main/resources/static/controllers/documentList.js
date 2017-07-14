@@ -1,7 +1,7 @@
 angular
 		.module('MyApp')
 		.controller(
-				'paroisseCtl',
+				'documentCtl',
 				function($scope, $http, $interval, uiGridConstants, $location,
 						$auth, $localStorage, toastr) {
 // $auth.setToken($localStorage.token);
@@ -25,7 +25,7 @@ angular
 					    }
 					  };
 					
-					$scope.getAllParishes = function() {
+					$scope.getAllDocument = function() {
 						$scope.showLoading = true;
 // $auth.removeToken();
 						console.log($localStorage.token);
@@ -33,7 +33,7 @@ angular
 						$http(
 								{
 									method : 'GET',
-									url : '/parish/',
+									url : '/document/',
 // headers : {
 // 'Authorization' : 'Basic '
 // + $localStorage.token
@@ -80,9 +80,9 @@ angular
 						$scope.getTransaction();
 					}
 					
-					$scope.creerParoisse = function(){
+					$scope.creerDocument = function(){
 
-						$location.path("/creerParoisse");
+						$location.path("/creerDocument");
 						
 						
 					}
@@ -337,7 +337,7 @@ angular
 //					}
 					
 					
-					$scope.getAllParishes();
+					$scope.getAllDocument();
 
 					$scope.gridOptions.columnDefs = [ {
 						name : 'id',
@@ -348,40 +348,29 @@ angular
 						
 
 					}, {
-						name : 'displayName',
+						name : 'name',
 //						enableHiding : false,
-						displayName : 'Nom de la Paroisse',
+						displayName : 'Nom du document',
 						enableCellEdit : true,
 						
 
 					},{
-						name : 'district',
+						name : 'description',
 //						enableHiding : false,
-						displayName : 'District',
+						displayName : 'Description',
 						enableCellEdit : true,
 					}
 					, {
-						name : 'website',
+						name : 'creationDate',
 						enableHiding : false,
-						displayName : 'Site Web',
+						displayName : 'Date création',
 						enableCellEdit : true
 					}, {
-						name : 'longitude',
+						name : 'link',
 						enableHiding : false,
-						displayName : 'Longitude',
+						displayName : 'Télécharger',
 						enableCellEdit : true,
 						
-					},  {
-						name : 'latitude',
-						enableHiding : false,
-						displayName : 'Latitude',
-						enableCellEdit : true,
-						
-					},	{
-						name : 'numberOfDevoted',
-						enableHiding : false,
-						displayName : 'Nombre de Fideles',
-						enableCellEdit : true,
 					}
 					];
 
@@ -436,12 +425,12 @@ angular
 //					var token = $auth.getToken();
 //					var accountid = $localStorage.accountid;
 
-					$scope.afficherParoisse = function() {
+					$scope.afficherDocument = function() {
 
 						var row = $scope.gridApi.selection.getSelectedRows();
 						$localStorage.id = row[0].id;
-//						document.title = "Go Archive Portal";
-						$location.path('/afficherParoisse').search({
+						document.title = "List of documents";
+						$location.path('/afficherDocument').search({
 							id : row[0].id
 						});
 
@@ -460,7 +449,7 @@ angular
 //					}
 					
 					setInterval(function() {
-						$scope.getAllParishes();
+						$scope.getAllDocument();
 					}, 300000);
 					
 					
