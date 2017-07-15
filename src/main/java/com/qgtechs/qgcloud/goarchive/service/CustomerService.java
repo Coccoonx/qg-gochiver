@@ -20,4 +20,5 @@ public interface CustomerService {
     Document upload ();
     Document download (String name);
 
+    Customer findUser(Customer customer);
 }

@@ -2,18 +2,17 @@ angular.module('MyApp')
   .controller('LoginCtrl', function($scope, $http, $location, $auth, $localStorage,$base64,toastr, Account) {
     $scope.login = function() {
     	// generate token and login
-        var payload = "grant_type=password" + "&username="+$scope.user.email+ "&password="+$scope.user.password;  
+//        var payload = "grant_type=password" + "&username="+$scope.user.email+ "&password="+$scope.user.password;
 //        var token='YWNtZTphY21lc2VjcmV0MQ==';
         $scope.showLoading = true;   
-        $scope.encoded = $base64.encode($scope.user.email+':'+$scope.user.password);
-        console.log($scope.encoded);
-        $location.path('/paroisses');
+//        $scope.encoded = $base64.encode($scope.user.email+':'+$scope.user.password);
+//        console.log($scope.encoded);
         $http({
        			method: 'POST',
        			//for production mode http://libre-exchange.awswouri.com/
 //       			url: 'http://libre-exchange.awswouri.com/admin/login',
-       			url: 'http://localhost:4545/customer/register',
-       			headers: {'Authorization': 'Basic '+$scope.encoded},
+       			url: 'http://localhost:4545/customer/login',
+//       			headers: {'Authorization': 'Basic '+$scope.encoded},
        		    data :  {
                 		email : $scope.user.email,
                 		password : $scope.user.password,
@@ -22,19 +21,21 @@ angular.module('MyApp')
        			console.log(response);
 //       			response.token=response.email;
        			response.data=response;
+       			document.title = "Go Archive Portal";
+                $location.path('/paroisses');
+
        			$localStorage.token=$scope.encoded;
-       			$auth.setToken($localStorage.token);
+//       			$auth.setToken($localStorage.token);
 //       			$auth.removeToken();
 
-       			console.log('token '+$auth.getToken());
+//       			console.log('token '+$auth.getToken());
        			$localStorage.accountid=$scope.user.email;
        			$localStorage.pwd= $scope.user.password;
        			$localStorage.username=response.firstName;
-       			console.log($localStorage.token);
+//       			console.log($localStorage.token);
        			$scope.showLoading = true;
 //       			$scope.getProfile($scope.user.email);
-       			document.title = "Go Archive Portal";
-       			$location.path('/transactions');
+
 //       		}).error(function(error){
 //				$scope.showLoading = false;
 //				$scope.showAPIFail = true;

@@ -68,6 +68,15 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
+    public Customer findUser(Customer customer) {
+        Customer exist = customerRepository.findByEmailAndPassword(customer.getEmail(), customer.getPassword());
+        if (exist == null) {
+            throw new IllegalArgumentException("error: Authentication Failed");
+        }
+        return exist;
+    }
+
+    @Override
     public Document upload() {
         return null;
     }

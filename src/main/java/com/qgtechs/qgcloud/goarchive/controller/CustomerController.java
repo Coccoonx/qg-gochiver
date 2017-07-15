@@ -55,6 +55,6 @@ public class CustomerController {
     @ResponseBody
     @Transactional
     public Customer login(@RequestBody Customer customer) {
-        return customerService.create(customer);
+        return customerService.findUser(customer);
     }
 }
