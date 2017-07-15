@@ -18,7 +18,7 @@ public class DocumentController {
     @Autowired
     DocumentService documentService;
 
-    @RequestMapping(value = "/document/", method = RequestMethod.POST)
+    @RequestMapping(value = "/document/create", method = RequestMethod.POST)
     @ResponseBody
     @Transactional
     public Document createDocument(@RequestBody Document document) {
@@ -32,13 +32,19 @@ public class DocumentController {
         return documentService.update(document);
     }
 
+//    @RequestMapping(value = "/document/", method = RequestMethod.GET)
+//    @ResponseBody
+//    @Transactional
+//    public List<Document> findAll() {
+//        return documentService.findAll();
+//    }
+
     @RequestMapping(value = "/document/", method = RequestMethod.GET)
     @ResponseBody
     @Transactional
-    public List<Document> findAll() {
+    public List<Document> getAllDocument() {
         return documentService.findAll();
     }
-
 
     @RequestMapping(value = "/document/{memberId}", method = RequestMethod.DELETE)
     @ResponseBody

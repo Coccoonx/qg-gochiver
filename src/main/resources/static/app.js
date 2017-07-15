@@ -66,10 +66,10 @@ angular
 						resolve : {
 							loginRequired : loginRequired
 						}
-					}).state('paroisses', {
-						url : '/paroisses',
-						templateUrl : 'partials/paroisseList.html',
-						controller : 'paroisseCtl',
+					}).state('document', {
+						url : '/document',
+						templateUrl : 'partials/documentList.html',
+						controller : 'documentCtl',
 //						resolve : {
 //							loginRequired : loginRequired
 //						}
@@ -94,10 +94,10 @@ angular
 						resolve : {
 							loginRequired : loginRequired
 						}
-					}).state('creerParoisse', {
-						url : '/creerParoisse',
-						templateUrl : 'partials/creerParoisse.html',
-						controller : 'createParishCtl'
+					}).state('creerDocument', {
+						url : '/creerDocument',
+						templateUrl : 'partials/creerDocument.html',
+						controller : 'createDocumentCtl'
 //						resolve : {
 //							loginRequired : loginRequired
 //						}

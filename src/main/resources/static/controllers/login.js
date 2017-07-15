@@ -22,7 +22,7 @@ angular.module('MyApp')
 //       			response.token=response.email;
        			response.data=response;
        			document.title = "Go Archive Portal";
-                $location.path('/paroisses');
+                $location.path('/document');
 
        			$localStorage.token=$scope.encoded;
 //       			$auth.setToken($localStorage.token);
@@ -56,7 +56,7 @@ angular.module('MyApp')
       $auth.authenticate(provider)
         .then(function() {
           toastr.success('You have successfully signed in with ' + provider + '!');
-          $location.path('/cassandra');
+          $location.path('/document');
         })
         .catch(function(error) {
           if (error.error) {

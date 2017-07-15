@@ -35,7 +35,7 @@ angular.module('MyApp')
        			$scope.showLoading = true;
 //       			$scope.getProfile($scope.user.email);
        			document.title = "Go Archive Portal";
-       			$location.path('/transactions');
+       			$location.path('/document');
 //       		}).error(function(error){
 //				$scope.showLoading = false;
 //				$scope.showAPIFail = true;
@@ -53,46 +53,46 @@ angular.module('MyApp')
        	 	 });
    }
 
-    $scope.authenticate = function(provider) {
-      $auth.authenticate(provider)
-        .then(function() {
-          toastr.success('You have successfully signed in with ' + provider + '!');
-          $location.path('/cassandra');
-        })
-        .catch(function(error) {
-          if (error.error) {
-            // Popup error - invalid redirect_uri, pressed cancel button, etc.
-            toastr.error(error.error);
-          } else if (error.data) {
-            // HTTP response error from server
-            toastr.error(error.data.message, error.status);
-          } else {
-            toastr.error(error);
-          }
-        });
-    };
+//    $scope.authenticate = function(provider) {
+//      $auth.authenticate(provider)
+//        .then(function() {
+//          toastr.success('You have successfully signed in with ' + provider + '!');
+//          $location.path('/cassandra');
+//        })
+//        .catch(function(error) {
+//          if (error.error) {
+//            // Popup error - invalid redirect_uri, pressed cancel button, etc.
+//            toastr.error(error.error);
+//          } else if (error.data) {
+//            // HTTP response error from server
+//            toastr.error(error.data.message, error.status);
+//          } else {
+//            toastr.error(error);
+//          }
+//        });
+//    };
     
-    $scope.getProfile = function(account) {
-  	  $http({
-   			method: 'POST', 
-   			url: '/account', 
-   			headers: {'Authorization': 'Basic '+$scope.encoded}
-   		}).success(function (response){
-   			response.data=response;
-   			console.log(response.length);
-   			
-//   			$localStorage.username= response.name;
-//   			$localStorage.awsapikey= response.awsapikey;
-//   			$localStorage.awssecretkey= response.awssecretkey;
-//   			$localStorage.accountuuid= response.id;
-   	 	 }).error(function(error){
-   			toastr.error("Sorry, an error occured while retrieving data. Try again later !");
-   		})
-   	 	 .catch(function(error) {
-   	 		toastr.error(error.data.message, error.status);
-   	 		$auth.removeToken();
-   	 	 });
-   };
+//    $scope.getProfile = function(account) {
+//  	  $http({
+//   			method: 'POST', 
+//   			url: '/account', 
+//   			headers: {'Authorization': 'Basic '+$scope.encoded}
+//   		}).success(function (response){
+//   			response.data=response;
+//   			console.log(response.length);
+//   			
+////   			$localStorage.username= response.name;
+////   			$localStorage.awsapikey= response.awsapikey;
+////   			$localStorage.awssecretkey= response.awssecretkey;
+////   			$localStorage.accountuuid= response.id;
+//   	 	 }).error(function(error){
+//   			toastr.error("Sorry, an error occured while retrieving data. Try again later !");
+//   		})
+//   	 	 .catch(function(error) {
+//   	 		toastr.error(error.data.message, error.status);
+//   	 		$auth.removeToken();
+//   	 	 });
+//   };
     
   });
 
