@@ -24,6 +24,12 @@ angular
 //					};
 					if (!$auth.isAuthenticated()) {
 						console.log('not authenticated');
+						console.log('LogoutCtrl end');
+                        					$localStorage.$reset();
+                        					console.log('You have been logged out');
+
+                        					toastr.info('You have been logged out');
+                        					$location.path('/');
 						return;
 					}
 					// Populate the cookies of the user logged in
@@ -38,12 +44,7 @@ angular
 //						toastr.info('You have been logged out');
 //						$location.path('/');
 //					});
-					console.log('LogoutCtrl end');
-					$localStorage.$reset();
-					console.log('You have been logged out');
-					
-					toastr.info('You have been logged out');
-					$location.path('/');
+
 					
 
 					

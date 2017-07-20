@@ -103,7 +103,7 @@ angular
 //													$auth.setToken($localStorage.token);
 									       			console.log(response);
 									       			console.log(response.id);
-									       			document.title = "EEC MunZeu Admin portal";
+									       			document.title = "QG Cloud";
 									       			$location.path('/pasteurs');
 											    	  swal("Success!",
 																"Berger crée.",
@@ -131,7 +131,7 @@ angular
 					}
 //
 					$scope.close = function() {
-						document.title = "EEC MunZeu Admin portal";
+						document.title = "QG Cloud";
 						$location.path('/pasteurs');
 						
 					}

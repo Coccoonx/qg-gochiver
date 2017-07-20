@@ -29,7 +29,6 @@ angular
 						$scope.showLoading = true;
 // $auth.removeToken();
 						console.log($localStorage.token);
-						
 						$http(
 								{
 									method : 'GET',
@@ -87,254 +86,29 @@ angular
 						
 					}
 					
+//					$scope.downloadFile = function (object) {
+//						console.log(object);
+//						if(object){
+//							$http.get(object.link, { responseType: 'arraybuffer' })
+//					        .success(function (data) {
+//					            var file = new Blob([data], { type: object.type });
+//					            var url = $window.URL || $window.webkitURL;
+//					            var fileURL = url.createObjectURL(file);
+//					            var a = document.createElement("a");
+//					            a.href = fileURL;
+//					            a.download = object.name;
+//					            a.target = "_self";
+//					            a.click();
+//					            url.revokeObjectURL(fileURL);
+//
+//					        }).error(function (data) {
+//					            console.error(data);
+//					        });
+//						}
+//					    
+//					    };
 					
-//					$scope.getTransaction = function() {
-//						var row = $scope.gridApi.selection.getSelectedRows();
-//						$localStorage.transactionId = row[0].id;
-//						$auth.removeToken();
-//						console.log($localStorage.token);
-//						$http({
-//							method : 'GET',
-//							url : '/admin/transfer',
-//							headers : {
-//								'Authorization' : 'Basic ' + $localStorage.token
-//							},
-//							params : {
-//								id : $localStorage.transactionId
-//							}
-//						})
-//								.success(
-//										function(response) {
-//											console.log("Transaction retrieved successfully");
-//											$auth.setToken($localStorage.token);
-//											console.log(response);
-//											$scope.status = response.transaction.status;
-//											$localStorage.transferCountry = response.customer.country;
-//											console.log(response.transaction.status);
-//											console.log($localStorage.transferCountry);
-//											if ($scope.status === 'INITIATED' ){
-//												$location.path('/viewFakeUsers').search({
-//													id : row[0].id
-//												});
-//											}else{
-//												sweetAlert(
-//														"Oops...",
-//														"ONLY transactions with the status INITIATED can be match",
-//														"error");
-//											}
-//										}).error(function(error) {
-//											console.log($scope.id);
-//											$auth.setToken($localStorage.token);
-//											console.log("error ");
-//											toastr.error(error.message,error.code);
-//								});
-//					}
 					
-//					$scope.getDepositTransaction = function() {
-//						var row = $scope.gridApi.selection.getSelectedRows();
-//						$localStorage.transactionId = row[0].id;
-//						$auth.removeToken();
-//						console.log($localStorage.token);
-//						$http({
-//							method : 'GET',
-//							url : '/admin/transfer',
-//							headers : {
-//								'Authorization' : 'Basic ' + $localStorage.token
-//							},
-//							params : {
-//								id : $localStorage.transactionId
-//							}
-//						})
-//								.success(
-//										function(response) {
-//											console.log("Transaction retrieved successfully");
-//											$auth.setToken($localStorage.token);
-//											console.log(response);
-//											$scope.transactionType = response.transaction.transactionType;
-//											$localStorage.transferCountry = response.customer.country;
-//											console.log($scope.transactionType);
-//											if ($scope.transactionType === 'Deposit' ){
-//												$scope.administerDeposits();
-//											}else{
-//												sweetAlert(
-//														"Oops...",
-//														"ONLY deposit transactions can be confirm/cancel",
-//														"error");
-//											}
-//										}).error(function(error) {
-//											console.log($scope.id);
-//											$auth.setToken($localStorage.token);
-//											console.log("error ");
-//											toastr.error(error.message,error.code);
-//								});
-//					}
-					
-//					$scope.getTransactionToConfirmAndConfirmOtherParty = function() {
-//						$interval(
-//								function() {
-//									$scope.gridApi.selection
-//											.selectRow($scope.gridOptions.data[0]);
-//								}, 0, 1);
-//						var row = $scope.gridApi.selection.getSelectedRows();
-//						$auth.removeToken();
-//						console.log($localStorage.token);
-//						$localStorage.transactionId = row[0].id;
-//						$http({
-//							method : 'GET',
-//							url : '/admin/transfer',
-//							headers : {
-//								'Authorization' : 'Basic ' + $localStorage.token
-//							},
-//							params : {
-//								id : $localStorage.transactionId
-//							}
-//						})
-//								.success(
-//										function(response) {
-//											console.log("Transaction retrieved successfully");
-//											$auth.setToken($localStorage.token);
-//											console.log(response);
-//											$scope.status = response.transaction.status;
-//											$localStorage.transferCountry = response.customer.country;
-//											console.log($localStorage.transferCountry);
-//											
-//											$localStorage.fakeTransactionId = response.id;
-//											$scope.customerZone= response.customer.zone;
-//											console.log($scope.customerZone);
-//											console.log($scope.status);
-//											if ($scope.status === 'RESERVED' || $scope.status === 'VERIFIED'){
-//												if($scope.customerZone !== 'AF' ){
-//													document.title = "Go Archive Portal";
-//													$location.path('/confirmZone1Transaction');
-//												}else{
-//													$scope.confirmOtherParty();
-//												}
-//											}else{
-//												sweetAlert(
-//														"Oops...",
-//														"ONLY transactions with the status REVERSED/VERIFIED can confirm other party transaction",
-//														"error");
-//											}
-//											
-//											
-//											
-//// if(typeof response.transaction.fake === 'undefined' ||
-//// response.transaction.fake === false){
-//// sweetAlert(
-//// "Oops...",
-//// "ONLY fake transactions can be confirm other party transaction on the admin
-//// portal",
-//// "error");
-//// }else{
-//// $scope.confirmOtherParty();
-//// }
-//										}).error(function(error) {
-//											console.log($scope.id);
-//											$auth.setToken($localStorage.token);
-//											console.log("error ");
-//											toastr.error(error.message,error.code);
-//								});
-//					}
-					
-//					$scope.confirmOtherParty = function() {
-//						$auth.removeToken();
-//						console.log($localStorage.token);
-//						$http({
-//							method : 'GET',
-//							url : '/admin/confirmothertransfer',
-//							headers : {
-//								'Authorization' : 'Basic ' + $localStorage.token
-//							},
-//							params : {
-//								id : $localStorage.transactionId
-//							}
-//						})
-//								.success(
-//										function(response) {
-//											console.log("Other party transaction confirmed successfully");
-//											$auth.setToken($localStorage.token);
-//											console.log(response);
-//											$scope.status = response.transaction.status;
-//											$localStorage.transferCountry = response.customer.country;
-//											console.log(response.transaction.status);
-//											console.log($localStorage.transferCountry);
-//											console.log(response.transaction.fake);
-//											swal("Success!",
-//													"Other party transaction confirmed successfully.",
-//													"success");
-//											
-//										}).error(function(error) {
-//											console.log($scope.id);
-//											$auth.setToken($localStorage.token);
-//											console.log("error ");
-//											toastr.error(error.message,error.code);
-//								});
-//					}
-					
-//					$scope.confirmFakeTransactions = function() {
-//						$interval(
-//								function() {
-//									$scope.gridApi.selection
-//											.selectRow($scope.gridOptions.data[0]);
-//								}, 0, 1);
-//						var row = $scope.gridApi.selection.getSelectedRows();
-//						$localStorage.transactionId = row[0].id;
-//						$auth.removeToken();
-//						console.log($localStorage.token);
-//						$http({
-//							method : 'GET',
-//							url : '/admin/transfer',
-//							headers : {
-//								'Authorization' : 'Basic ' + $localStorage.token
-//							},
-//							params : {
-//								id : $localStorage.transactionId
-//							}
-//						})
-//								.success(
-//										function(response) {
-//											console.log("Transaction retrieved successfully");
-//											$auth.setToken($localStorage.token);
-//											console.log(response);
-//											$scope.status = response.transaction.status;
-//											$localStorage.transferCountry = response.customer.country;
-//											console.log(response.transaction.status);
-//											console.log($localStorage.transferCountry);
-//											console.log(response.transaction.fake);
-//											$localStorage.fakeTransactionId = response.id;
-//											$scope.customerZone= response.customer.zone;
-//											console.log($scope.customerZone);
-//											if($scope.customerZone !== 'AF' ){
-//												sweetAlert(
-//														"Oops...",
-//														"ONLY transactions of zone 2 can be confirm",
-//														"error");
-//											}else{
-//												if ($scope.status === 'IN_PROGRESS' ){
-//													document.title = "Go Archive Portal";
-//													$location.path('/confirmTransaction');
-//// if ($scope.customerZone === 'AF' ){
-//// console.log("zone2");
-//// $location.path('/confirmTransaction');
-//// }else{
-//// console.log("zone1");
-//// $location.path('/confirmZone1Transaction');
-//// }
-//												}else{
-//													sweetAlert(
-//															"Oops...",
-//															"ONLY transactions with the status IN_PROGRESS can be confirm",
-//															"error");
-//												}
-//											}
-//											
-//										}).error(function(error) {
-//											console.log($scope.id);
-//											$auth.setToken($localStorage.token);
-//											console.log("error ");
-//											toastr.error(error.message,error.code);
-//								});
-//					}
 					
 					
 					$scope.getAllDocument();
@@ -369,7 +143,9 @@ angular
 						name : 'link',
 						enableHiding : false,
 						displayName : 'Télécharger',
-						enableCellEdit : true,
+						enableCellEdit : true
+						,
+				         cellTemplate:'<a href="{{row.entity.link}}" download>Download</a>'
 						
 					}
 					];
@@ -436,17 +212,6 @@ angular
 
 					}
 					
-//					$scope.administerDeposits = function() {
-//						
-//						var row = $scope.gridApi.selection.getSelectedRows();
-//						$localStorage.depositId = row[0].id;
-//						console.log($localStorage.depositId);
-//						document.title = "Go Archive Portal";
-//						$location.path('/depositDetails').search({
-//							id : row[0].id
-//						});
-//
-//					}
 					
 					setInterval(function() {
 						$scope.getAllDocument();

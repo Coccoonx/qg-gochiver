@@ -11,7 +11,7 @@ angular.module('MyApp')
        			method: 'POST',
        			//for production mode http://libre-exchange.awswouri.com/
 //       			url: 'http://libre-exchange.awswouri.com/admin/login',
-       			url: 'http://localhost:4545/customer/register',
+       			url: 'http://192.168.1.246:4545/customer/register',
 //       			headers: {'Authorization': 'Basic '+$scope.encoded},
        		    data :  {
        		            firstName: $scope.user.firstname,
@@ -43,7 +43,7 @@ angular.module('MyApp')
        		}).catch(function(error) {
        			$scope.showLoading = false;
 				$scope.showAPIFail = true;
-			    toastr.error("An Error Occured");
+			    toastr.error("An Error Occured: "+error.message);
 //				if (error.status === 401) {
 //					toastr.error("Sorry, your email and/or your password are incorrect");
 //			      }else{

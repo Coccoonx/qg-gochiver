@@ -18,9 +18,10 @@ public class Document {
     private String code;
     private String name;
     private String link;
-    private String size;
+    private long size;
     private String description;
     private String extension;
+    private String type;
 
     @CreatedDate
     @NotNull
@@ -67,11 +68,11 @@ public class Document {
 		this.link = link;
 	}
 
-	public String getSize() {
+	public long getSize() {
 		return size;
 	}
 
-	public void setSize(String size) {
+	public void setSize(long size) {
 		this.size = size;
 	}
 
@@ -81,14 +82,6 @@ public class Document {
 
 	public void setDescription(String description) {
 		this.description = description;
-	}
-
-	public String getExtension() {
-		return extension;
-	}
-
-	public void setExtension(String extension) {
-		this.extension = extension;
 	}
 
 	public Date getCreationDate() {
@@ -114,6 +107,24 @@ public class Document {
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
+
+	public String getExtension() {
+		return extension;
+	}
+
+	public void setExtension(String extension) {
+		this.extension = extension;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+	
+	
     
     
 }

@@ -1,3 +1,7 @@
 target/
 .idea
-qg-cloud.iml
+*.iml
+.project
+.settings
+.mvn
+.classpath

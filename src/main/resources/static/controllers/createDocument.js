@@ -3,79 +3,52 @@ angular
 		.controller(
 				'createDocumentCtl',
 				function($scope, $http, $interval, uiGridConstants, $location,
-						$auth, $localStorage, toastr) {
+						$auth, $localStorage, toastr, Upload) {
 					
-					$scope.createDocument = function() {
+					$scope.createDoc = function() {
+					console.log("createDoc");
+					console.log($scope.file);
 
-						swal(
-								{
-									title : "<b> Creation de Document </b>",
-									text : "Voulez-vous creez ce document ?",
-									imageUrl : "images/succes.png",
-									imageSize : "130x130",
-									showCancelButton : true,
-									confirmButtonColor : "#34b1c4",
-									confirmButtonText : "Yes,create it",
-									closeOnConfirm : true,
-									html : true
-								},
-								function(isConfirm) {
-									console.log($localStorage.fakeUserId);
-									if (isConfirm) {
-//										$auth.removeToken();
-										console.log($localStorage.token);
-										var urls = new Array();
-										urls.push($scope.document.url)
-										$http(
-												{
-													method : 'POST',
-													url : '/document/',
-//													headers : {
-//														'Authorization' : 'Basic '
-//																+ $localStorage.token
-//													},
-													data :  {
-														website : $scope.document.website,
-														displayName : $scope.document.displayName,
-														longitude : $scope.document.longitude,
-														latitude : $scope.document.latitude,
-														numberOfDevoted : $scope.document.numberOfDevoted,
-														pictureUrls : urls,
-														district : $scope.document.district
-														
-												}
-													
-												}).success(function (response){
-													console.log("Fake recipient created successfully");
-//													$auth.setToken($localStorage.token);
-									       			console.log(response);
-									       			console.log(response.id);
-									       			document.title = "Go archiver portal";
-									       			$location.path('/paroisses');
-											    	  swal("Success!",
-																"Document crée.",
-																"success");
-									       			
-									       			
-									       		})
-												
-												.error(
-														function(error) {
-															$auth.setToken($localStorage.token);
-															toastr
-																	.error("Failed to create recipient '"
-																			+ $scope.recipient.firstname
-																			+ "' : "
-																			+ error.message);
-														});
-										
-										
+                    if ( $scope.file) {
+                        					console.log("file Exist");
 
-									}
+                        $scope.upload($scope.file);
 
-								});
+                    }
+
+
 
 					}
+
+					$scope.upload = function (file) {
+										console.log("upload");
+										
+						    var ext = file.name.split(".")[1];
+
+                            Upload.upload({
+                                url: 'http://192.168.1.246:4545/document/upload',
+                                data: {file: file,
+                                	   email: $localStorage.accountid,
+                                		   name : file.name,
+                                		   type:  file.type,
+                                		   extension : ext,
+                                		   description: $scope.description
+                                	   
+                                	}
+                            }).then(function (resp) {
+                                console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
+                                toastr.info("Upload Complete");
+                                $location.path("/document");
+                            }, function (resp) {
+                                console.log('Error status: ' + resp.status);
+                                toastr.error(resp.status);
+
+                            }, function (evt) {
+                                var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+                                console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
+                            });
+                        };
+
 //
 					$scope.close = function() {
 						document.title = "Go archiver portal";

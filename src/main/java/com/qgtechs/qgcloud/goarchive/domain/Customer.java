@@ -23,6 +23,8 @@ public class Customer {
     private String password;
     private String email;
     private String phoneNumber;
+    
+    private String folder;
 
     private long quotaMax;
     private long quotaCurrent;
@@ -135,6 +137,16 @@ public class Customer {
 	public void setCompany(Company company) {
 		this.company = company;
 	}
+
+	public String getFolder() {
+		return folder;
+	}
+
+	public void setFolder(String folder) {
+		this.folder = folder;
+	}
+	
+	
     
     
 
