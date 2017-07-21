@@ -43,7 +43,7 @@ public class Document {
     @CreatedDate
     @NotNull
     @Temporal(TemporalType.TIMESTAMP)
-    @JsonView(Views.Private.class)
+    @JsonView(Views.Public.class)
     private Date creationDate = new Date();
 
     @LastModifiedDate

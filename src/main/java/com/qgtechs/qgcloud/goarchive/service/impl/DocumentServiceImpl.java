@@ -32,6 +32,9 @@ public class DocumentServiceImpl implements DocumentService {
     @Value("${server.address}")
 	String serverAddress;
 
+    @Value("${root.directory}")
+	String baseDirectory;
+    
     @Override
     public Document create(Customer customer, MultipartFile file, Document document) {
     	
@@ -52,7 +55,7 @@ public class DocumentServiceImpl implements DocumentService {
             doc.setDescription(document.getDescription());
             doc.setExtension(document.getExtension());
             doc.setType(document.getType());
-            File fileTmp = new File(foundCustomer.getFolder(), code+"."+document.getExtension());
+            File fileTmp = new File(baseDirectory.concat(foundCustomer.getFolder()), code+"."+document.getExtension());
             doc.setLink("ftp://"+serverAddress+"/"+foundCustomer.getFolder()+"/"+code+"."+document.getExtension());
             doc.setCustomer(customer);
             

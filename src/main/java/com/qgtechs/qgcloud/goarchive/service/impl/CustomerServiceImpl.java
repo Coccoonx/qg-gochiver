@@ -38,13 +38,15 @@ public class CustomerServiceImpl implements CustomerService {
 			throw new IllegalArgumentException("customer.already.exists");
 		}
 
-		String dirRef = baseDirectory.concat( RandomStringUtils.randomAlphabetic(10));
+		
+		String folder = RandomStringUtils.randomAlphabetic(10);
+		String dirRef = baseDirectory.concat(folder);
 		System.out.println("User Folder: " + dirRef);
 
 		boolean success = (new File(dirRef)).mkdirs();
 		if (success) {
 
-			customer.setFolder(dirRef);
+			customer.setFolder(folder);
 			customer.setEncodedPassword(passwordEncoder.encode(customer.getPassword()));
 			customer.setPassword(null);
 			return customerRepository.save(customer);
