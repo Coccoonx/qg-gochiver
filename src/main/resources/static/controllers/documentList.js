@@ -103,7 +103,7 @@ angular
 						displayName : 'Télécharger',
 						enableCellEdit : true
 						,
-				         cellTemplate:'<center><a href="{{row.entity.link}}" download><img src="images/download.png" /></a><center>'
+				         cellTemplate:'<center><a href="{{row.entity.link}}" target="_blank" download="{{row.entity.name}}"><img src="images/download.png" /></a><center>'
 						
 					}
 					];
