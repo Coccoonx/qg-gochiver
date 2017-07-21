@@ -10,21 +10,38 @@ import javax.validation.constraints.NotNull;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.qgtechs.qgcloud.goarchive.view.Views;
+
 @Entity
 // @Data
 public class Customer {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@JsonView(Views.Private.class)
 	private Long id;
+	
+	@JsonView(Views.Private.class)
 	private String registrationNumber;
+	
+	@JsonView(Views.Public.class)
 	private String firstName;
+	
+	@JsonView(Views.Public.class)
 	private String lastName;
+	
+	@JsonView(Views.Private.class)
 	private String password;
+	
+	@JsonView(Views.Public.class)
 	private String email;
+	
+	@JsonView(Views.Public.class)
 	private String phoneNumber;
 
 	@Column(nullable = false)
+	@JsonView(Views.Private.class)
 	private String encodedPassword;
 
 	@Column(nullable = false)
@@ -32,24 +49,26 @@ public class Customer {
 
 	@Column(nullable = false)
 	@Enumerated(EnumType.ORDINAL)
+	@JsonView(Views.Public.class)
 	private Status status = Status.ACTIVATED;
 
+	@JsonView(Views.Private.class)
 	private String folder;
-
-	private long quotaMax;
-	private long quotaCurrent;
 
 	@CreatedDate
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
+	@JsonView(Views.Private.class)
 	private Date creationDate = new Date();
 
 	@LastModifiedDate
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
+	@JsonView(Views.Private.class)
 	private Date lastModificationDate = new Date();
 
 	@ManyToOne
+	@JsonView(Views.Public.class)
 	private Company company;
 
 	public Long getId() {
@@ -108,21 +127,6 @@ public class Customer {
 		this.phoneNumber = phoneNumber;
 	}
 
-	public long getQuotaMax() {
-		return quotaMax;
-	}
-
-	public void setQuotaMax(long quotaMax) {
-		this.quotaMax = quotaMax;
-	}
-
-	public long getQuotaCurrent() {
-		return quotaCurrent;
-	}
-
-	public void setQuotaCurrent(long quotaCurrent) {
-		this.quotaCurrent = quotaCurrent;
-	}
 
 	public Date getCreationDate() {
 		return creationDate;

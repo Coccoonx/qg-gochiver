@@ -1,8 +1,10 @@
 package com.qgtechs.qgcloud.goarchive.controller;
 
+import com.fasterxml.jackson.annotation.JsonView;
 import com.qgtechs.qgcloud.goarchive.domain.Customer;
 import com.qgtechs.qgcloud.goarchive.domain.Document;
 import com.qgtechs.qgcloud.goarchive.service.DocumentService;
+import com.qgtechs.qgcloud.goarchive.view.Views;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,6 +32,7 @@ public class DocumentController {
     @RequestMapping(value = "/document/upload", method = RequestMethod.POST)
     @ResponseBody
     @Transactional
+    @JsonView(Views.Public.class)
     public Document createDocument(@AuthenticationPrincipal User principal,
     		@RequestParam("file") MultipartFile file, 
     		@RequestParam("name") String name,
@@ -51,6 +54,7 @@ public class DocumentController {
     @RequestMapping(value = "/document/", method = RequestMethod.PUT)
     @ResponseBody
     @Transactional
+    @JsonView(Views.Public.class)
     public Document updateDocument(@AuthenticationPrincipal User principal, 
     		@RequestBody Document document) {
         return documentService.update(document);
@@ -60,6 +64,7 @@ public class DocumentController {
     @RequestMapping(value = "/document/", method = RequestMethod.GET)
     @ResponseBody
     @Transactional
+    @JsonView(Views.Public.class)
     public List<Document> getAllDocument(@AuthenticationPrincipal User principal) {
     	Customer customer = new Customer();
 		customer.setId(Long.parseLong(principal.getUsername().toString()));
@@ -78,6 +83,7 @@ public class DocumentController {
     @RequestMapping(value = "/admin/document/", method = RequestMethod.GET)
     @ResponseBody
     @Transactional
+    @JsonView(Views.Private.class)
     public List<Document> getAdminAllDocument(@AuthenticationPrincipal User principal) {
         return documentService.findAll();
     }
