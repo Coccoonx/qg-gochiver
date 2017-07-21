@@ -24,15 +24,21 @@ angular
 										console.log("upload");
 										
 						    var ext = file.name.split(".")[1];
+						    var desc = " ";
+						    if($scope.description)
+						    	desc = $scope.description;
+						    	
 
                             Upload.upload({
                                 url: 'http://192.168.1.246:4545/document/upload',
+                                header : {
+                                	'Authorization' : 'Basic '+ $localStorage.token
+                                },
                                 data: {file: file,
-                                	   email: $localStorage.accountid,
                                 		   name : file.name,
                                 		   type:  file.type,
                                 		   extension : ext,
-                                		   description: $scope.description
+                                		   description: desc
                                 	   
                                 	}
                             }).then(function (resp) {

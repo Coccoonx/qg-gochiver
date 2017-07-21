@@ -5,7 +5,7 @@ angular.module('MyApp')
 //        var payload = "grant_type=password" + "&username="+$scope.user.email+ "&password="+$scope.user.password;
 //        var token='YWNtZTphY21lc2VjcmV0MQ==';
         $scope.showLoading = true;   
-//        $scope.encoded = $base64.encode($scope.user.email+':'+$scope.user.password);
+        $scope.encoded = $base64.encode($scope.user.email+':'+$scope.user.password);
 //        console.log($scope.encoded);
         $http({
        			method: 'POST',
@@ -21,21 +21,18 @@ angular.module('MyApp')
                 }
        		}).success(function (response){
        			console.log(response);
-//       			response.token=response.email;
        			response.data=response;
-//       			$localStorage.token=$scope.encoded;
-//       			$auth.setToken($localStorage.token);
-//       			$auth.removeToken();
-
-//       			console.log('token '+$auth.getToken());
+       			$localStorage.token=$scope.encoded;
+       			$auth.setToken($localStorage.token);
+       			console.log('token :'+$auth.getToken());
        			$localStorage.accountid=$scope.user.email;
        			$localStorage.pwd= $scope.user.password;
        			$localStorage.username=response.firstName;
-//       			console.log($localStorage.token);
        			$scope.showLoading = true;
 //       			$scope.getProfile($scope.user.email);
        			document.title = "Go Archive Portal";
        			$location.path('/document');
+       			
 //       		}).error(function(error){
 //				$scope.showLoading = false;
 //				$scope.showAPIFail = true;

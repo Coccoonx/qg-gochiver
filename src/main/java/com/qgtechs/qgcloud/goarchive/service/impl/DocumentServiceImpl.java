@@ -7,6 +7,7 @@ import com.qgtechs.qgcloud.goarchive.repository.DocumentRepository;
 import com.qgtechs.qgcloud.goarchive.service.DocumentService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -27,30 +28,33 @@ public class DocumentServiceImpl implements DocumentService {
     
     @Autowired
     CustomerRepository customerRepository;
+    
+    @Value("${server.address}")
+	String serverAddress;
 
     @Override
-    public Document create(String email, MultipartFile file, Document document) {
+    public Document create(Customer customer, MultipartFile file, Document document) {
     	
     	
-    	Customer customer = customerRepository.findByEmail(email);
+    	Customer foundCustomer = customerRepository.findOne(customer.getId());
     	
-    	if(customer!=null){
-    		Document exist = documentRepository.findByName(document.getName());
-            if (exist != null) {
+    	if(foundCustomer!=null){
+    		Document doc = documentRepository.findByName(document.getName());
+            if (doc != null) {
                 throw new IllegalArgumentException("document.already.exists");
             }
 
-            exist = new Document();
-            exist.setName(document.getName());
-            exist.setSize(file.getSize());
+            doc = new Document();
+            doc.setName(document.getName());
+            doc.setSize(file.getSize());
             String code = UUID.randomUUID().toString();
-            exist.setCode(code);
-            exist.setDescription(document.getDescription());
-            exist.setExtension(document.getExtension());
-            exist.setType(document.getType());
-            File fileTmp = new File(customer.getFolder(), code+"."+document.getExtension());
-            exist.setLink("ftp://192.168.1.246/"+customer.getFolder()+"/"+code+"."+document.getExtension());
-            exist.setCustomer(customer);
+            doc.setCode(code);
+            doc.setDescription(document.getDescription());
+            doc.setExtension(document.getExtension());
+            doc.setType(document.getType());
+            File fileTmp = new File(foundCustomer.getFolder(), code+"."+document.getExtension());
+            doc.setLink("ftp://"+serverAddress+"/"+foundCustomer.getFolder()+"/"+code+"."+document.getExtension());
+            doc.setCustomer(customer);
             
 
             if (!file.isEmpty()) {
@@ -60,7 +64,7 @@ public class DocumentServiceImpl implements DocumentService {
                             new BufferedOutputStream(new FileOutputStream(fileTmp));
                     stream.write(bytes);
                     stream.close();
-                    return documentRepository.save(exist);
+                    return documentRepository.save(doc);
                 } catch (Exception e) {
                     return null;
                 }
@@ -95,12 +99,6 @@ public class DocumentServiceImpl implements DocumentService {
         return documentRepository.findByCustomer(customer);
     }
     
-    @Override
-    public List<Document> findByCustomer(String email) {
-    	Customer customer = customerRepository.findByEmail(email);
-        return documentRepository.findByCustomer(customer);
-    }
-
 
     @Override
     public void delete(Long id) {

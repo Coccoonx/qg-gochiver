@@ -9,6 +9,7 @@ import org.apache.commons.lang.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
@@ -23,6 +24,9 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Autowired
 	CustomerRepository customerRepository;
+	
+	@Autowired
+	PasswordEncoder passwordEncoder;
 
 	@Value("${root.directory}")
 	String baseDirectory;
@@ -34,13 +38,15 @@ public class CustomerServiceImpl implements CustomerService {
 			throw new IllegalArgumentException("customer.already.exists");
 		}
 
-		String dirRef = "D:\\temp\\"+RandomStringUtils.randomAlphabetic(10);
+		String dirRef = baseDirectory.concat( RandomStringUtils.randomAlphabetic(10));
 		System.out.println("User Folder: " + dirRef);
 
 		boolean success = (new File(dirRef)).mkdirs();
 		if (success) {
 
 			customer.setFolder(dirRef);
+			customer.setEncodedPassword(passwordEncoder.encode(customer.getPassword()));
+			customer.setPassword(null);
 			return customerRepository.save(customer);
 		}
 		

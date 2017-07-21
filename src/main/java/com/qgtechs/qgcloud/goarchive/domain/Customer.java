@@ -11,42 +11,52 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
 @Entity
-//@Data
+// @Data
 public class Customer {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-    private String registrationNumber;
-    private String firstName;
-    private String lastName;
-    private String password;
-    private String email;
-    private String phoneNumber;
-    
-    private String folder;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+	private String registrationNumber;
+	private String firstName;
+	private String lastName;
+	private String password;
+	private String email;
+	private String phoneNumber;
 
-    private long quotaMax;
-    private long quotaCurrent;
+	@Column(nullable = false)
+	private String encodedPassword;
 
-    @CreatedDate
-    @NotNull
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date creationDate = new Date();
+	@Column(nullable = false)
+	private Boolean enabled = true;
 
-    @LastModifiedDate
-    @NotNull
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date lastModificationDate = new Date();
+	@Column(nullable = false)
+	@Enumerated(EnumType.ORDINAL)
+	private Status status = Status.ACTIVATED;
 
-    @ManyToOne
-    private Company company;
+	private String folder;
 
-	public long getId() {
+	private long quotaMax;
+	private long quotaCurrent;
+
+	@CreatedDate
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date creationDate = new Date();
+
+	@LastModifiedDate
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date lastModificationDate = new Date();
+
+	@ManyToOne
+	private Company company;
+
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -145,9 +155,29 @@ public class Customer {
 	public void setFolder(String folder) {
 		this.folder = folder;
 	}
-	
-	
-    
-    
+
+	public String getEncodedPassword() {
+		return encodedPassword;
+	}
+
+	public void setEncodedPassword(String encodedPassword) {
+		this.encodedPassword = encodedPassword;
+	}
+
+	public Boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(Boolean enabled) {
+		this.enabled = enabled;
+	}
+
+	public Status getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
 
 }

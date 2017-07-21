@@ -2,221 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0bbdfa2-ef39-466c-a016-52203e110f46" name="Default" comment="enabling login feature">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/ng-file-upload-shim.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/ng-file-upload.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/ng-file-upload-shim.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/ng-file-upload.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/.Rhistory" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/addConversionRate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/addFakeRecipient.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/addFakeUser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/addLocalCompany.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/coTransactionDetail.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/confirm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/confirmZone1.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/createAdmin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/createParish.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/createPastor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/depositDetails.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/forgotpassword.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/home.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/logout.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/paroisseList.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/pasteurList.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/profile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/resetpassword.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/transactionDetail.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/updateMaxTransfer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/verify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/viewConversionRates.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/viewDeposits.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/viewFakeUsers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/viewLocalCompanies.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/viewMaxTransfers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/controllers/viewrecipients.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/directives/passwordMatch.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/directives/passwordStrength.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Black.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Black.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Black.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Black.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-BlackItalic.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-BlackItalic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-BlackItalic.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-BlackItalic.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Bold.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Bold.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Bold.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-BoldItalic.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-BoldItalic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-BoldItalic.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-BoldItalic.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Hairline.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Hairline.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Hairline.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Hairline.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Italic.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Light.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Light.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Light.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Light.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-LightItalic.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-LightItalic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-LightItalic.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-LightItalic.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Thin.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Thin.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Thin.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/Lato-Thin.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/ui-grid.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/ui-grid.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/ui-grid.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/fonts/ui-grid.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/Delete.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/alert.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/anonymous_pic.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/anonymous_user.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/blue-arrow-down.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/down.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/dropdown.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/dropup.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/email-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/flags.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/flags@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/libreexchange_logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/libreexchange_logo_old.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/loader-small.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/logo_old.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/password-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/succes.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/support.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/support_hover.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/support_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/textfield-bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/user-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/user.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/user_hover.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/images/user_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/addConversionRate.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/addFakeRecipient.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/addFakeUser.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/addLocalCompany.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/coTransactionDetails.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/confirm.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/confirmZone1.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/createAdmin.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/creerParoisse.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/creerPasteur.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/depositDetails.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/home.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/login.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/main.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/paroisseList.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/pasteurList.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/profile.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/resetpassword.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/transactionDetails.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/updateMaxTransfer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/verify.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/viewConversionRates.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/viewDeposits.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/viewFakeUsers.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/viewLocalCompanies.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/viewMaxTransfers.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/viewrecipients.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/services/account.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/stylesheets/angular-toastr.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/stylesheets/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/stylesheets/column.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/stylesheets/form-basic.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/stylesheets/intlTelInput.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/stylesheets/intlTelInput.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/stylesheets/menu.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/stylesheets/streamly-style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/stylesheets/sweetalert.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/stylesheets/twitter.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/stylesheets/ui-grid-unstable.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/stylesheets/ui-grid.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/stylesheets/ui-grid.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/stylesheets/ui-grid.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/stylesheets/ui-grid.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/stylesheets/ui-grid.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/stylesheets/ui-grid.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/angucomplete-alt.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/angular-animate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/angular-base64.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/angular-idle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/angular-idle.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/angular-messages.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/angular-mocks.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/angular-resource.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/angular-sanitize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/angular-toastr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/angular-toastr.tpls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/angular-touch.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/angular-ui-router.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/angular.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/aws-sdk.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap-filestyle.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap-submenu.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/dragging_service.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/flowchart_directive.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/flowchart_viewmodel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/formValidation.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/intlTelInput.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/intlTelInput.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/ion.rangeSlider.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/jquery-1.11.3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/mouse_capture_service.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/ng-file-upload-shim.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/ng-file-upload.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/ngStorage.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/satellizer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/svg_class.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/sweetalert.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/ui-bootstrap-tpls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/ui-grid.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/vendor/utils.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qgtechs/qgcloud/goarchive/controller/CustomerController.class" afterPath="$PROJECT_DIR$/target/classes/com/qgtechs/qgcloud/goarchive/controller/CustomerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qgtechs/qgcloud/goarchive/controller/DocumentController.class" afterPath="$PROJECT_DIR$/target/classes/com/qgtechs/qgcloud/goarchive/controller/DocumentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qgtechs/qgcloud/goarchive/domain/Document.class" afterPath="$PROJECT_DIR$/target/classes/com/qgtechs/qgcloud/goarchive/domain/Document.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qgtechs/qgcloud/goarchive/repository/CustomerRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/qgtechs/qgcloud/goarchive/repository/CustomerRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qgtechs/qgcloud/goarchive/service/CustomerService.class" afterPath="$PROJECT_DIR$/target/classes/com/qgtechs/qgcloud/goarchive/service/CustomerService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qgtechs/qgcloud/goarchive/service/DocumentService.class" afterPath="$PROJECT_DIR$/target/classes/com/qgtechs/qgcloud/goarchive/service/DocumentService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qgtechs/qgcloud/goarchive/service/impl/CustomerServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/qgtechs/qgcloud/goarchive/service/impl/CustomerServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qgtechs/qgcloud/goarchive/service/impl/DocumentServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/qgtechs/qgcloud/goarchive/service/impl/DocumentServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qg-cloud.iml" afterPath="$PROJECT_DIR$/qg-cloud.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/controller/CustomerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/controller/CustomerController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/controller/DocumentController.java" afterPath="$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/controller/DocumentController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/domain/Document.java" afterPath="$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/domain/Document.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/domain/Customer.java" afterPath="$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/domain/Customer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/service/DocumentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/service/DocumentService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/service/impl/CustomerServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/service/impl/CustomerServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/service/impl/DocumentServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/service/impl/DocumentServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/controllers/createDocument.js" afterPath="$PROJECT_DIR$/src/main/resources/static/controllers/createDocument.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/controllers/createPastor.js" afterPath="$PROJECT_DIR$/src/main/resources/static/controllers/createPastor.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/controllers/documentList.js" afterPath="$PROJECT_DIR$/src/main/resources/static/controllers/documentList.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/controllers/login.js" afterPath="$PROJECT_DIR$/src/main/resources/static/controllers/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/partials/creerDocument.html" afterPath="$PROJECT_DIR$/src/main/resources/static/partials/creerDocument.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/partials/creerPasteur.html" afterPath="$PROJECT_DIR$/src/main/resources/static/partials/creerPasteur.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/partials/login.html" afterPath="$PROJECT_DIR$/src/main/resources/static/partials/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/partials/pasteurList.html" afterPath="$PROJECT_DIR$/src/main/resources/static/partials/pasteurList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/controllers/login.js" afterPath="$PROJECT_DIR$/target/classes/static/controllers/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/index.html" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/controllers/logout.js" afterPath="$PROJECT_DIR$/src/main/resources/static/controllers/logout.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/controllers/signup.js" afterPath="$PROJECT_DIR$/src/main/resources/static/controllers/signup.js" />
     </list>
     <ignored path="qg-cloud.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -261,8 +61,8 @@
       <file leaf-file-name="createDocument.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/controllers/createDocument.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="39" column="63" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
+            <state relative-caret-position="663">
+              <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -271,8 +71,8 @@
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="16" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="16" />
+            <state relative-caret-position="289">
+              <caret line="17" column="0" selection-start-line="13" selection-start-column="12" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -281,16 +81,10 @@
       <file leaf-file-name="DocumentController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/controller/DocumentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="33" column="19" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="19" />
+            <state relative-caret-position="918">
+              <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="false" />
-                <element signature="e#1418#1419#0" expanded="false" />
-                <element signature="e#1473#1474#0" expanded="false" />
-                <element signature="e#1832#1833#0" expanded="false" />
-                <element signature="e#1880#1881#0" expanded="false" />
-                <element signature="e#2063#2064#0" expanded="false" />
-                <element signature="e#2111#2112#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -299,16 +93,13 @@
       <file leaf-file-name="DocumentServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/service/impl/DocumentServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+            <state relative-caret-position="1105">
+              <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="false" />
-                <element signature="e#2298#2299#0" expanded="false" />
-                <element signature="e#2366#2367#0" expanded="false" />
-                <element signature="e#2443#2444#0" expanded="false" />
-                <element signature="e#2509#2510#0" expanded="false" />
-                <element signature="e#2835#2836#0" expanded="false" />
-                <element signature="e#2893#2894#0" expanded="false" />
+                <element signature="e#3708#3709#0" expanded="false" />
+                <marker date="1500611737798" expanded="true" signature="3373:3590" ph="{...}" />
+                <marker date="1500611737798" expanded="false" signature="3649:3660" ph=" { " />
               </folding>
             </state>
           </provider>
@@ -329,7 +120,7 @@
       <file leaf-file-name="ng-file-upload.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/vendor/ng-file-upload.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="2924">
               <caret line="172" column="6" selection-start-line="172" selection-start-column="6" selection-end-line="172" selection-end-column="6" />
               <folding />
             </state>
@@ -339,7 +130,7 @@
       <file leaf-file-name="Document.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/domain/Document.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
+            <state relative-caret-position="850">
               <caret line="74" column="28" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="false" />
@@ -436,7 +227,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/controllers/addConversionRate.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/controllers/addFakeRecipient.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/partials/paroisseList.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/domain/Payment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/domain/Customer.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/partials/signup.html" />
@@ -463,6 +253,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/service/impl/DocumentServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/partials/creerDocument.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/controllers/createDocument.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -520,6 +311,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -831,10 +626,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1164,28 +955,28 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898772" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42532468" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16950959" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16950959" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42532468" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1498,40 +1289,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/controllers/createDocument.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="39" column="63" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
+        <state relative-caret-position="663">
+          <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/controller/DocumentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="33" column="19" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="19" />
+        <state relative-caret-position="918">
+          <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1418#1419#0" expanded="false" />
-            <element signature="e#1473#1474#0" expanded="false" />
-            <element signature="e#1832#1833#0" expanded="false" />
-            <element signature="e#1880#1881#0" expanded="false" />
-            <element signature="e#2063#2064#0" expanded="false" />
-            <element signature="e#2111#2112#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/service/impl/DocumentServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+        <state relative-caret-position="1105">
+          <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#2298#2299#0" expanded="false" />
-            <element signature="e#2366#2367#0" expanded="false" />
-            <element signature="e#2443#2444#0" expanded="false" />
-            <element signature="e#2509#2510#0" expanded="false" />
-            <element signature="e#2835#2836#0" expanded="false" />
-            <element signature="e#2893#2894#0" expanded="false" />
+            <element signature="e#3708#3709#0" expanded="false" />
+            <marker date="1500611737798" expanded="true" signature="3373:3590" ph="{...}" />
+            <marker date="1500611737798" expanded="false" signature="3649:3660" ph=" { " />
           </folding>
         </state>
       </provider>
@@ -1548,7 +1330,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qgtechs/qgcloud/goarchive/domain/Document.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
+        <state relative-caret-position="850">
           <caret line="74" column="28" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="false" />
@@ -1602,7 +1384,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/vendor/ng-file-upload.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="2924">
           <caret line="172" column="6" selection-start-line="172" selection-start-column="6" selection-end-line="172" selection-end-column="6" />
           <folding />
         </state>
@@ -1610,8 +1392,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="16" />
+        <state relative-caret-position="289">
+          <caret line="17" column="0" selection-start-line="13" selection-start-column="12" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -33,10 +33,10 @@ angular
 								{
 									method : 'GET',
 									url : '/document/',
-// headers : {
-// 'Authorization' : 'Basic '
-// + $localStorage.token
-// }
+									 headers : {
+									 'Authorization' : 'Basic '
+									 + $localStorage.token
+									 }
 								})
 								.success(
 										function(response) {
@@ -68,16 +68,6 @@ angular
 								});
 					}
 
-					$scope.matchWithFakeUser = function() {
-						$interval(
-								function() {
-									$scope.gridApi.selection
-											.selectRow($scope.gridOptions.data[0]);
-								}, 0, 1);
-						var row = $scope.gridApi.selection.getSelectedRows();
-						$localStorage.transactionId = row[0].id;
-						$scope.getTransaction();
-					}
 					
 					$scope.creerDocument = function(){
 

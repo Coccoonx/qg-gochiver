@@ -1,8 +1,14 @@
 package com.qgtechs.qgcloud.goarchive.controller;
 
+import com.qgtechs.qgcloud.goarchive.domain.Customer;
 import com.qgtechs.qgcloud.goarchive.domain.Document;
 import com.qgtechs.qgcloud.goarchive.service.DocumentService;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +21,8 @@ import java.util.List;
  */
 @Controller
 public class DocumentController {
+	
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     DocumentService documentService;
@@ -22,54 +30,58 @@ public class DocumentController {
     @RequestMapping(value = "/document/upload", method = RequestMethod.POST)
     @ResponseBody
     @Transactional
-    public Document createDocument(@RequestParam("email") String email,
+    public Document createDocument(@AuthenticationPrincipal User principal,
     		@RequestParam("file") MultipartFile file, 
     		@RequestParam("name") String name,
     		@RequestParam("extension") String extension,
     		@RequestParam("description") String description,
     		@RequestParam("type") String type) {
+    	
+    	Customer customer = new Customer();
+		customer.setId(Long.parseLong(principal.getUsername().toString()));
+		
     	Document document = new Document();
     	document.setName(name);
     	document.setExtension(extension);
     	document.setType(type);
     	document.setDescription(description);
-        return documentService.create(email, file, document);
+        return documentService.create(customer, file, document);
     }
 
     @RequestMapping(value = "/document/", method = RequestMethod.PUT)
     @ResponseBody
     @Transactional
-    public Document updateDocument(@RequestBody Document document) {
+    public Document updateDocument(@AuthenticationPrincipal User principal, 
+    		@RequestBody Document document) {
         return documentService.update(document);
     }
 
-//    @RequestMapping(value = "/document/", method = RequestMethod.GET)
-//    @ResponseBody
-//    @Transactional
-//    public List<Document> findAll() {
-//        return documentService.findAll();
-//    }
 
     @RequestMapping(value = "/document/", method = RequestMethod.GET)
     @ResponseBody
     @Transactional
-    public List<Document> getAllDocument() {
-        return documentService.findAll();
-    }
-    
-    @RequestMapping(value = "/document/{email}", method = RequestMethod.GET)
-    @ResponseBody
-    @Transactional
-    public List<Document> getAllDocument(@PathVariable(value="email") String email) {
-        return documentService.findByCustomer(email);
+    public List<Document> getAllDocument(@AuthenticationPrincipal User principal) {
+    	Customer customer = new Customer();
+		customer.setId(Long.parseLong(principal.getUsername().toString()));
+		logger.info("User: {}", principal.getUsername().toString());
+        return documentService.findByCustomer(customer);
     }
 
     @RequestMapping(value = "/document/{memberId}", method = RequestMethod.DELETE)
     @ResponseBody
     @Transactional
-    public void deleteDocument(@PathVariable long memberId) {
+    public void deleteDocument(@AuthenticationPrincipal User principal, @PathVariable long memberId) {
         documentService.delete(memberId);
     }
+    
+    
+    @RequestMapping(value = "/admin/document/", method = RequestMethod.GET)
+    @ResponseBody
+    @Transactional
+    public List<Document> getAdminAllDocument(@AuthenticationPrincipal User principal) {
+        return documentService.findAll();
+    }
+    
 
 
 }

@@ -23,10 +23,10 @@ angular
 					}).state('signup', {
 						url : '/signup',
 						templateUrl : 'partials/signup.html',
-						controller : 'SignUpCtrl'
-//						resolve : {
-//							skipIfLoggedIn : skipIfLoggedIn
-//						}
+						controller : 'SignUpCtrl',
+						resolve : {
+							skipIfLoggedIn : skipIfLoggedIn
+						}
 					}).state('registrationconfirm', {
 						url : '/registrationconfirm',
 						templateUrl : 'partials/registrationconfirm.html',
@@ -70,44 +70,16 @@ angular
 						url : '/document',
 						templateUrl : 'partials/documentList.html',
 						controller : 'documentCtl',
-//						resolve : {
-//							loginRequired : loginRequired
-//						}
-					}).state('pasteurs', {
-						url : '/pasteurs',
-						templateUrl : 'partials/pasteurList.html',
-						controller : 'pasteurCtl',
-//						resolve : {
-//							loginRequired : loginRequired
-//						}
-					}).state('createAdmin', {
-						url : '/createAdmin',
-						templateUrl : 'partials/createAdmin.html',
-						controller : 'createAdminCtrl',
-						resolve : {
-							loginRequired : loginRequired
-						}
-					}).state('transactionDetails', {
-						url : '/transactionDetails',
-						templateUrl : 'partials/transactionDetails.html',
-						controller : 'transactionDetailCtl',
 						resolve : {
 							loginRequired : loginRequired
 						}
 					}).state('creerDocument', {
 						url : '/creerDocument',
 						templateUrl : 'partials/creerDocument.html',
-						controller : 'createDocumentCtl'
-//						resolve : {
-//							loginRequired : loginRequired
-//						}
-					}).state('creerPasteur', {
-						url : '/creerPasteur',
-						templateUrl : 'partials/creerPasteur.html',
-						controller : 'createPastorCtl'
-//						resolve : {
-//							loginRequired : loginRequired
-//						}
+						controller : 'createDocumentCtl',
+						resolve : {
+							loginRequired : loginRequired
+						}
 					});
 
 					$urlRouterProvider.otherwise('/');
@@ -257,7 +229,7 @@ angular
 					});
 					$rootScope.$on("$stateChangeError", function (event, next, current) {
 						console.log("Route change");
-						$location.path('/transactions');
+						$location.path('/document');
 //                        if (!(next.templateUrl == "partials/login.html")) {
 //                            $location.path("/login");
 //                        }
@@ -273,7 +245,7 @@ angular
 							console.log(" before the logger");
 							
 							toastr.info('You have been logged out');
-							$location.path('/');
+							$location.path('/login');
 
 						});
 					});

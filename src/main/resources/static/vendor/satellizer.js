@@ -23,13 +23,13 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.ex
       tokenRoot: null,
       cordova: false,
       baseUrl: '/',
-      loginUrl: '/admin/login',
-      signupUrl: '/admin/signup',
+      loginUrl: '/login',
+      signupUrl: '/signup',
       unlinkUrl: '/auth/unlink/',
       tokenName: 'token',
       tokenPrefix: 'satellizer',
       authHeader: 'Authorization',
-      authToken: 'Bearer',
+      authToken: 'Basic',
       storageType: 'localStorage',
       providers: {
         facebook: {

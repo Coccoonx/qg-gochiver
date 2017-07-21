@@ -8,29 +8,27 @@ angular.module('MyApp')
 //        var payload = "grant_type=password" + "&username="+$scope.user.email+ "&password="+$scope.user.password;
 //        var token='YWNtZTphY21lc2VjcmV0MQ==';
         $scope.showLoading = true;   
-//        $scope.encoded = $base64.encode($scope.user.email+':'+$scope.user.password);
-        console.log("Click");
+        $scope.encoded = $base64.encode($scope.user.email+':'+$scope.user.password);
         $http({
        			method: 'POST',
        			//for production mode http://libre-exchange.awswouri.com/
 //       			url: 'http://libre-exchange.awswouri.com/admin/login',
        			url: 'http://192.168.1.246:4545/customer/login',
-//       			headers: {'Authorization': 'Basic '+$scope.encoded},
+       			headers: {'Authorization': 'Basic '+$scope.encoded},
        		    data :  {
                 		email : $scope.user.email,
                 		password : $scope.user.password,
                 }
        		}).success(function (response){
        			console.log(response);
-//       			response.token=response.email;
        			response.data=response;
        			document.title = "Go Archive Portal";
 
-//       			$localStorage.token=$scope.encoded;
-//       			$auth.setToken($localStorage.token);
+       			$localStorage.token=$scope.encoded;
+       			$auth.setToken($localStorage.token);
 //       			$auth.removeToken();
 
-//       			console.log('token '+$auth.getToken());
+       			console.log('token '+$auth.getToken());
        			$localStorage.accountid=$scope.user.email;
        			$localStorage.pwd= $scope.user.password;
        			$localStorage.username=response.firstName;
